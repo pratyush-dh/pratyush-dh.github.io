@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+	  padding-top:10px;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      position: relative; /* Added to enable absolute positioning */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+	  color: #
+    }
+
+    #upload::file-selector-button {
+      border: 2px solid #555555;
+      color: #555555;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+
+    #upload::file-selector-button:hover {
+      background-color: #e9e9e9;
+    }
+
+    #upload::-webkit-file-upload-button {
+      border: 2px solid #555555;
+      color: #555555;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+
+    #upload::-webkit-file-upload-button:hover {
+      background-color: #e9e9e9;
+    }
+
+    .loading-message {
+      font-style: italic;
+      color: #888888;
+	  display: none;
+    }
+	#Heading {
+	  font-size: 2em;
+	  color: #f44336;
+	  background-color: #fff;
+	  border-radius: 10px;
+	  margin-top: 100px;
+	  padding: 10px;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	}
+
+	#Sub {
+	  font-size: 0.8em;
+	  color: #2196f3;
+	  background-color: #fff;
+	  border-radius: 10px;
+	  margin-top: 10px;
+	  padding: 10px;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	}
+
+    /* Footer styles */
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin-top: 20px;
+	  margin-left: 5%;
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .footer a {
+      color: blue;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="main-container">
+    <div id="Heading">Teachable Machine Image Model</div>
+
+    <div id="Sub">
+      "To identify the disease in your potato plant, please input a clear image of your
+      plant's symptomatic leaf."
+    </div>
+
+    <div>
+      <h2>Image Classifier</h2>
+      <div>
+        <p>Please upload an image and see the classification results in the table below.</p>
+      </div>
+      <input type="file" id="upload" accept="image/*" />
+      <img id="img" style="max-height: 300px;">
+      <div id="loading" class="loading-message">Model is running...</div>
+      <table id="predicts"></table>
+      <div id="additional-info"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+  <script type="text/javascript">
+    const URL = "https://teachablemachine.withgoogle.com/models/lcFtJTKvM/";
+
+    let model, labelContainer, maxPredictions;
+
+    async function init() {
+      const modelURL = URL + "model.json";
+      const metadataURL = URL + "metadata.json";
+
+      model = await tmImage.load(modelURL, metadataURL);
+      maxPredictions = model.getTotalClasses();
+    }
+
+    init();
+
+    const img = document.getElementById('img');
+    const uploadInput = document.getElementById('upload');
+    const predictsTable = document.getElementById('predicts');
+    const additionalInfo = document.getElementById('additional-info');
+	const mainContainer = document.getElementById('main-container');
+
+    uploadInput.addEventListener('change', handleFileSelect, false);
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+        img.src = event.target.result;
+
+        img.onload = function () {
+          document.getElementById('loading').style.display = 'block';
+          model.predict(img).then(predictions => {
+            console.log(predictions);
+
+            // Hide the loading message
+            document.getElementById('loading').style.display = 'none';
+
+            predictsTable.innerHTML = '';
+
+            const tbody = document.createElement('tbody');
+
+            const thead = document.createElement('thead');
+            const tr = document.createElement('tr');
+            const th1 = document.createElement('th');
+            const th2 = document.createElement('th');
+            th1.textContent = 'ClassName';
+            th2.textContent = 'Probability';
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            thead.appendChild(tr);
+            predictsTable.appendChild(thead);
+
+            let maxProbability = 0;
+            let maxClassName = '';
+
+            predictions.forEach(prediction => {
+              const tr = document.createElement('tr');
+              const td1 = document.createElement('td');
+              const td2 = document.createElement('td');
+              td1.textContent = prediction.className;
+              td2.textContent = prediction.probability.toFixed(3);
+              tr.appendChild(td1);
+              tr.appendChild(td2);
+              tbody.appendChild(tr);
+
+              if (prediction.probability > maxProbability) {
+                maxProbability = prediction.probability;
+                maxClassName = prediction.className;
+              }
+            });
+
+            predictsTable.appendChild(tbody);
+
+		    additionalInfo.innerHTML = '';
+			const classHeading = document.createElement('h3');
+			const infoText = document.createElement('p');
+			
+		    if (maxClassName === 'EarlyBlight') {
+			  classHeading.textContent = "Early Blight";
+			  
+			  infoText.textContent = "Early blight, caused by the fungus Alternaria solani, is a prevalent fungal disease that poses a significant threat to potato plants. Its impact on potato crops is profound, resulting in reduced yield and compromised quality. Symptoms of early blight manifest as dark brown or black lesions with distinctive concentric rings on the lower leaves. As the disease progresses, these lesions may enlarge, forming a target-like pattern. Affected leaves may yellow, wither, and prematurely drop off, while stems and tubers can also develop lesions. Early blight thrives in warm and humid conditions, with the fungus finding refuge in plant debris and soil. It becomes active during periods of high humidity and moderate temperatures. To manage early blight effectively, a multi-faceted approach is necessary. Cultural practices such as crop rotation, proper spacing, and the removal and destruction of infected plant material are vital. The application of appropriate fungicides, selection of resistant potato varieties, and strategic irrigation management through soil watering instead of overhead methods further contribute to disease control. Implementing organic mulching techniques helps create a barrier, minimizing soil splashing and reducing the risk of infection. Early detection and continuous monitoring are crucial for timely intervention. Consulting with agricultural experts and extension services can provide region-specific guidance, enabling effective management of early blight in potatoes.";			  
+		    } else if (maxClassName === 'HeaLthy') {
+			  classHeading.textContent = "Healthy";
+			  
+			  infoText.textContent = 'Additional information about the Healthy';
+			} else if (maxClassName === 'LateBlight') {
+			  classHeading.textContent = "Late Blight";
+			  
+			  infoText.textContent = "Late blight is a destructive plant disease affecting potatoes and other Solanaceae family members, caused by Phytophthora infestans. It leads to reduced potato yield and quality. Symptoms include dark, water-soaked lesions on leaves, stems, and tubers, turning brown with a greasy appearance. Fungal growth may appear in humid conditions, and infected tubers develop dark, irregular lesions. Late blight spreads rapidly in cool, moist environments, surviving in plant debris and spreading via windborne spores. Remedies involve cultural practices like crop rotation, proper spacing, timely planting, and removing infected material. Fungicides, particularly copper-based ones, can be applied. Planting resistant varieties and monitoring for early detection are crucial. Local late blight forecasting systems aid disease risk management. Specific remedies vary by region, regulations, and disease severity, necessitating consultation with agricultural experts for tailored recommendations. Effective management strategies mitigate late blight's impact, ensuring healthier potato crops and a sustainable agricultural industry.";
+			}
+			
+			additionalInfo.appendChild(classHeading);
+			additionalInfo.appendChild(infoText);
+			mainContainer.append(additionalInfo);
+            });
+          };
+        };
+
+        reader.readAsDataURL(file);
+      }
+  </script>
+</body>
+
+ 
+</html>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Details - Tkinter application for batch report generation</title>
+  <title>Precipation Animation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,15 +51,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/reportAutomation1.jpg" alt="">
+                  <img src="assets/img/portfolio/animation1.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/reportAutomation2.jpg" alt="">
+                  <img src="assets/img/portfolio/animation2.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/reportAutomation3.jpg" alt="">
+                  <img src="assets/img/portfolio/animation3.jpg" alt="">
                 </div>
 
               </div>
@@ -71,22 +71,19 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Software Development</li>
-                <li><strong>Skills Used</strong>: Python, Tkinter, Object Oriented Programming, Automation, input validation</li>
-                <li><strong>Find Source Code at</strong>: <a href="https://github.com/pratyush-dh/report-automation" target="_blank">Report automation tool with Tkinter</a></li>
+                <li><strong>Category</strong>: Development</li>
+                <li><strong>Skills Used</strong>: Python, GEE, Data Visualization, Animation </li>
+                <li><strong>Find Source Code at</strong>: <a href="https://github.com/pratyush-dh/animation" target="_blank">Here</a></li>
 				</ul>
             </div>
             <div class="portfolio-description">
               <h2>Summary:</h2>
               <p>
-                Often time for projects, it is required to create a separate report for each individual entitiy (for example counties), 
-				but the report is based on a template .<br>
-				With existing python packages for word processing, it is easy to manipulate the text contents, however they lack the power to manipulate images.
-				This application helps you instantiously generate a new report by replacing all the images in the template report file with the images of interest.
-				Here, a word document is parsed as a zip file and it's contents are updated and it is again converted back to an word document file. The script also
-				performs simple form validation of inputs and offers some help to user for using the tool.
-				<br>
-				You can also use the script in a loop to generate multiple reports quickly, where the images are updated.
+                Data is downloaded using GEE. Here we are downloading, cleaning and visualizing precipitation data for multiple places. From daily precipitation data, we calculate the annual precipitaion average for each location for each layer and show plot them against year.
+
+				Steps:
+				1. Use the `obtainData.js` script and interactively obtain CHIRPS daily precipitaion data. Mind the naming convention which is `placename_chirps.csv`. 
+				2. Use the `animation.py` to create a _gif_ of time series.
 			  </p>
             </div>
           </div>

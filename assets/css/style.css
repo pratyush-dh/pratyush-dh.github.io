@@ -330,7 +330,12 @@ h6 {
 #hero .social-links a:hover {
   color: #0563bb;
 }
-
+.profile-pic{
+	width: 992px;
+	height: 992px;
+	border: 10px solid red;
+	border-radius: 50%;
+}
 @media (max-width: 992px) {
   #hero {
     text-align: center;

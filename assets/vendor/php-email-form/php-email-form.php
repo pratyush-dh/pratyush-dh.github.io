@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
   $message = trim($message);
 
   // Send email
-  $to = 'pdhungana@crimson.ua.edu';
+  $to = 'pd624@msstate.edu';
   $headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n" .
              'Reply-To: ' . $email . "\r\n" .
              'X-Mailer: PHP/' . phpversion();

@@ -1,49 +1,282 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Custom Professional Styling for Pratyush Dhungana Portfolio */
+
+/* Enhanced Typography & Branding */
+:root {
+  --primary-color: #0563bb;
+  --secondary-color: #25a18e;
+  --accent-color: #44b99e;
+  --dark-color: #272829;
+  --light-color: #f5f5f5;
 }
 
-/* Set the overall font and background color */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
-/* Style for the flowchart container */
-.flowchart {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 50px auto;
-    max-width: 1200px;
+.section-title h2 {
+  color: var(--dark-color);
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* Style for each box in the flowchart */
-.box {
-    background-color: #fff;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.section-title p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-/* Custom styling for specific boxes */
-.box.start {
-    background-color: #28a745;
-    color: white;
-    border-color: #28a745;
+/* Enhanced About Section */
+.about .content h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
-.box.end {
-    background-color: #dc3545;
-    color: white;
-    border-color: #dc3545;
+.about .content p.fst-italic {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 500;
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+/* Enhanced Resume Section */
+.resume-item h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.resume-item h5 {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.resume-item p em {
+  color: #666;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.resume-item ul li {
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Enhanced Skills Section */
+.skills .progress {
+  margin-bottom: 25px;
+}
+
+.skills .skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.skills .skill .val {
+  background: var(--primary-color);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skills .progress-bar-wrap {
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.skills .progress-bar {
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Enhanced Portfolio Section */
+.portfolio-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-info h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.portfolio-info p {
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.portfolio-wrap {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Enhanced Contact Section */
+.contact .info {
+  background: var(--light-color);
+  padding: 25px;
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.contact .info h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.contact .info p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact .info i {
+  color: var(--secondary-color);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Availability Badge Styling */
+.availability-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #009933;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Button & Link Enhancements */
+a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hero Section Enhancement */
+#hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#hero h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+#hero .typed-cursor {
+  color: #25a18e;
+}
+
+#hero p span {
+  color: #25a18e;
+  font-weight: 600;
+}
+
+/* Social Links Enhancement */
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-links a:hover {
+  background: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 36px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .resume-item h4 {
+    font-size: 16px;
+  }
+
+  .about .content p.fst-italic {
+    font-size: 14px;
+  }
+}
+
+/* Footer Enhancement */
+#footer {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 40px 0 20px;
+}
+
+#footer h3 {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+#footer p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#footer .social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Print Friendly */
+@media print {
+  .social-links,
+  .mobile-nav-toggle,
+  #preloader {
+    display: none;
+  }
+
+  .resume-item {
+    page-break-inside: avoid;
+  }
 }
 
 /* Media query for responsive design */

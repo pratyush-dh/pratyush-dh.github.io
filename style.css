@@ -69,21 +69,86 @@ code{
 }
 
 /* ---------- hero ---------- */
-.hero{
-  height:100vh;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center;
-  position:relative;
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
   background:
-    radial-gradient(ellipse 80% 60% at 28% 18%, rgba(92,135,156,0.14), transparent 60%),
-    radial-gradient(ellipse 70% 50% at 78% 82%, rgba(214,169,74,0.09), transparent 60%),
+    radial-gradient(
+      ellipse 80% 60% at 28% 18%,
+      rgba(92,135,156,0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 78% 82%,
+      rgba(214,169,74,0.09),
+      transparent 60%
+    ),
     var(--bg-deep);
-  overflow:hidden;
+
+  overflow: hidden;
 }
-.hero-inner{
-  opacity:0; transform:translateY(16px);
+
+.hero-inner {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 2rem;
+
+  opacity: 0;
+  transform: translateY(16px);
   animation: heroIn 0.9s cubic-bezier(.16,.8,.3,1) 0.15s forwards;
-  padding:0 1.5rem;
+}
+
+.hero-inner h1 {
+  width: 100%;
+  max-width: calc(100vw - 1.5rem);
+  margin: 0 auto;
+
+  font-size: min(7vw, 5.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* Keep the rendered MathJax inside the heading width */
+.hero-inner h1 mjx-container {
+  max-width: 80%;
+  font-size: 0.5em !important;
+}
+
+/* Smaller screens */
+@media (max-width: 700px) {
+  .hero-inner h1 {
+    max-width: calc(100vw - 1.5rem);
+    font-size: clamp(1rem, 6vw, 2.35rem);
+    line-height: 1.18;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-inner h1 {
+    max-width: calc(100vw - 1.5rem);
+    font-size: clamp(1.15rem, 6vw, 2.35rem);
+    line-height: 1.18;
+  }
+}
+.model-note {
+  margin-top: 0.4rem;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink-dim);
+}
+
+.tagline {
+  margin-top: 0.5rem;
 }
 @keyframes heroIn{ to{ opacity:1; transform:translateY(0);} }
 .hero h1{

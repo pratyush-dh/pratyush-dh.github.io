@@ -3,344 +3,313 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pratyush Dhungana — Data Scientist &amp; Geospatial Specialist</title>
+  <title>Pratyush Dhungana — Forest Biometrics &amp; Geospatial Analytics</title>
   <meta name="description" content="Pratyush Dhungana — Data Scientist working across forest biometrics, geospatial analysis, remote sensing, and utility-sector analytics." />
   <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="scroll-progress" id="scroll-progress"></div>
 
-  <header class="site-header">
-    <a class="brand" href="#top">PD</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<nav class="nav">
+  <a class="nav-brand" href="#hero">Pratyush Dhungana</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#resume">Resume</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#finale">Contact</a>
+  </div>
+</nav>
 
-  <main id="top">
-    <section class="hero">
-      <canvas id="contour-canvas" aria-hidden="true"></canvas>
-      <div class="hero-inner">
-        <p class="eyebrow reveal"><span class="dot"></span> Available for work</p>
-        <h1 class="reveal">Pratyush<br />Dhungana</h1>
-        <p class="hero-role reveal">I'm a <span id="typed-role" class="typed-role"></span><span class="typed-cursor" aria-hidden="true">|</span></p>
-        <p class="hero-lede reveal">
-          Data Scientist working across forest biometrics, spatial analysis, ecology, and
-          utility-sector analytics — translating complex data challenges into robust,
-          actionable solutions with Python, R, GIS, and machine learning.
-        </p>
-        <div class="hero-actions reveal">
-          <a class="btn btn-primary" href="#portfolio">View portfolio <span aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="mailto:dh.prtsh@gmail.com">Get in touch</a>
-        </div>
-        <div class="hero-links reveal">
-          <a href="https://github.com/pratyush-dh" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            <span>GitHub</span>
-          </a>
-          <a href="https://linkedin.com/in/pratyush-dh" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.82 0H1.18C.53 0 0 .52 0 1.16v13.68C0 15.48.53 16 1.18 16h13.64c.65 0 1.18-.52 1.18-1.16V1.16C16 .52 15.47 0 14.82 0zM4.75 13.63H2.38V6.15h2.38v7.48zM3.56 5.13a1.38 1.38 0 110-2.75 1.38 1.38 0 010 2.75zm10.07 8.5h-2.37V9.99c0-.87-.02-1.99-1.21-1.99-1.22 0-1.4.95-1.4 1.93v3.7H6.28V6.15h2.28v1.02h.03c.32-.6 1.09-1.23 2.24-1.23 2.4 0 2.84 1.58 2.84 3.63v4.06z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-          <a href="mailto:dh.prtsh@gmail.com">
-            <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M1.5 3A1.5 1.5 0 000 4.5v.32l8 4.44 8-4.44V4.5A1.5 1.5 0 0014.5 3h-13zM16 6.06l-7.6 4.22a.9.9 0 01-.8 0L0 6.06V11.5A1.5 1.5 0 001.5 13h13a1.5 1.5 0 001.5-1.5V6.06z"/></svg>
-            <span>Email</span>
-          </a>
-        </div>
-        <a class="scroll-cue" href="#about" aria-label="Scroll to about">
-          <span></span>
-        </a>
-      </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <h1>Pratyush Dhungana</h1>
+    <p class="tagline">Measuring what grows — from satellite to soil.</p>
+    <div class="hero-strip" id="hero-strip">
+      <img src="assets/img/portfolio/equalearth1.png" alt="" />
+      <img src="assets/img/portfolio/model1.jpg" alt="" />
+      <img src="assets/img/portfolio/lulc1.jpg" alt="" />
+      <img src="assets/img/portfolio/swimmingpool3.jpg" alt="" />
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="chev"></span></div>
+</section>
 
-    <section class="stats-strip reveal">
-      <div class="stat">
-        <div class="stat-value" data-count-to="13">0</div>
-        <div class="stat-label">Projects spanning GIS, ML, and web tools</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" data-count-to="14000" data-suffix="+">0</div>
-        <div class="stat-label">LiDAR tiles automated for utility corridor mapping</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" data-count-to="38616" data-suffix="+">0</div>
-        <div class="stat-label">Miles of utility network assessed for positional accuracy</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" data-count-to="3">0</div>
-        <div class="stat-label">Degrees spanning geomatics, forestry, and forest biometrics</div>
-      </div>
-    </section>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-media">
+    <img id="about-img" src="assets/img/profile-img.jpg" alt="Pratyush Dhungana" />
+  </div>
+  <div class="about-copy" id="about-copy">
+    <div class="name">Pratyush Dhungana</div>
+    <div class="role">Data scientist — forest biometrics, geospatial analytics, and forest carbon</div>
+    <div class="desc">I build the pipelines that turn LiDAR, remote sensing, and forest inventory data into biomass, carbon, and management insight — trained at Mississippi State's Forest Biometrics Lab, applied at industry scale.</div>
+    <div class="loc">Based in Florida, USA. Originally from Pokhara, Nepal.</div>
+    <div class="desc small">This is a short walk through the kind of problems I solve, and how — followed by the full resume and project archive below.</div>
+  </div>
+</section>
 
-    <section id="about" class="section about-section">
-      <div class="section-head reveal">
-        <p class="section-eyebrow">About</p>
-        <h2>Forest biometrics, geospatial analysis, and everything between</h2>
+<!-- CAPABILITIES -->
+<section class="cap-wrap" id="capabilities">
+  <div class="cap-sticky">
+    <div class="cap-bg">
+      <img data-i="0" src="assets/img/portfolio/equalearth1.png" alt="" />
+      <img data-i="1" src="assets/img/portfolio/model1.jpg" alt="" />
+      <img data-i="2" src="assets/img/portfolio/lulc1.jpg" alt="" />
+      <img data-i="3" src="assets/img/portfolio/swimmingpool3.jpg" alt="" />
+    </div>
+    <div class="cap-content">
+      <div class="cap-panel" data-i="0">
+        <h3>Forest Data Scientist</h3>
+        <p>Your forest inventory tells you what a handful of plots look like. I build statistical models — small area estimation, mixed-effects, machine learning — that turn those plots into reliable biomass and volume estimates for every county, stand, or parcel you manage.</p>
+        <span class="cap-chip">Thesis: small-domain biomass estimates across Mississippi &amp; Minnesota</span>
       </div>
-      <div class="about-grid reveal">
-        <div class="about-photo">
-          <img src="assets/img/profile-img.jpg" alt="Pratyush Dhungana" />
-        </div>
-        <div class="about-copy-wrap">
-          <p class="about-copy">
-            I am a <strong>Data Scientist</strong> working across forest biometrics, spatial
-            analysis, ecology, and utility-sector analytics. I translate complex data
-            challenges into robust, actionable solutions using Python, R, GIS, and machine
-            learning — applying statistical rigor to real-world problems that span
-            environmental management, infrastructure planning, and ecological research.
-          </p>
-          <p class="about-copy">
-            From processing 14,000+ LiDAR tiles for utility corridor management to
-            developing machine learning models for forest biomass estimation, I've worked
-            with spatial and non-spatial datasets across multiple industries — building
-            workflows that move from raw data to business insight.
-          </p>
-          <ul class="quick-facts">
-            <li><span class="qf-label">Website</span><span><a href="https://pratyush-dh.github.io/" target="_blank" rel="noopener">pratyush-dh.github.io</a></span></li>
-            <li><span class="qf-label">City</span><span>Florida, USA</span></li>
-            <li><span class="qf-label">Status</span><span>Data Scientist</span></li>
-            <li><span class="qf-label">Email</span><span><a href="mailto:dh.prtsh@gmail.com">dh.prtsh@gmail.com</a></span></li>
-            <li><span class="qf-label">Availability</span><span class="badge-available">Available for work</span></li>
+      <div class="cap-panel" data-i="1">
+        <h3>Geospatial Analyst</h3>
+        <p>Spatial data scattered across shapefiles, LiDAR tiles, and field surveys doesn't help anyone decide anything. I build the GIS pipelines, ArcPy toolboxes, and spatial databases that turn that mess into fast, repeatable analysis.</p>
+        <span class="cap-chip">Automated LiDAR-to-raster workflows for utility corridor management</span>
+      </div>
+      <div class="cap-panel" data-i="2">
+        <h3>Remote Sensing Specialist</h3>
+        <p>No field crew can manually check every acre of canopy or every mile of utility corridor. I train models on LiDAR and satellite imagery to detect, classify, and monitor change automatically, at a scale field work can't match.</p>
+        <span class="cap-chip">38,616+ mile positional accuracy assessment, LiDAR &amp; spatial statistics</span>
+      </div>
+      <div class="cap-panel" data-i="3">
+        <h3>Machine Learning Engineer</h3>
+        <p>From satellite classification to object detection, I take a model from a research notebook to something that runs on real imagery at scale — transfer learning, careful validation, and a deployable result at the end.</p>
+        <span class="cap-chip">14,000+ LiDAR tiles automated for feature extraction</span>
+      </div>
+    </div>
+    <div class="cap-index" id="cap-index">
+      <div class="dot-row" data-i="0"><span class="num">01</span><span class="dot"></span></div>
+      <div class="dot-row" data-i="1"><span class="num">02</span><span class="dot"></span></div>
+      <div class="dot-row" data-i="2"><span class="num">03</span><span class="dot"></span></div>
+      <div class="dot-row" data-i="3"><span class="num">04</span><span class="dot"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section class="toolkit reveal" id="toolkit">
+  <p class="toolkit-label">Tools &amp; methods</p>
+  <ul class="toolkit-list">
+    <li>ArcGIS suite</li>
+    <li>Python (ArcPy, Pandas, NumPy, GDAL)</li>
+    <li>R (tidyverse, mlr, terra, lidR)</li>
+    <li>LiDAR &amp; spatial data processing</li>
+    <li>Remote sensing</li>
+    <li>Machine learning &amp; data science</li>
+    <li>Google Earth Engine</li>
+    <li>Adobe Creative Suite</li>
+  </ul>
+</section>
+
+<!-- STORY / CASE STUDY -->
+<section class="story reveal" id="story">
+  <div class="story-head">
+    <h2>How a DEM becomes a stream network</h2>
+    <p>One real tool from the archive: an ArcGIS Model Builder pipeline that replaces six manual hydrology operations with one push-button run.</p>
+  </div>
+  <div class="story-steps">
+    <div class="story-step">
+      <img src="assets/img/portfolio/model1.jpg" alt="Input digital elevation model" />
+      <div class="n">Step 1</div>
+      <h4>Raw DEM input</h4>
+      <p>A digital elevation model and a threshold value go in — the same two inputs regardless of the watershed.</p>
+    </div>
+    <div class="story-step">
+      <img src="assets/img/portfolio/model2.jpg" alt="Model Builder hydrology pipeline" />
+      <div class="n">Step 2</div>
+      <h4>Six operations, one tool</h4>
+      <p>Fill, flow direction, flow accumulation, stream definition, stream link, and vectorization run automatically in ArcGIS Model Builder.</p>
+    </div>
+    <div class="story-step">
+      <img src="assets/img/portfolio/model3.jpg" alt="Output stream network" />
+      <div class="n">Step 3</div>
+      <h4>A stream network, ready to use</h4>
+      <p>What used to be a manual, error-prone chain is now ~83% less hands-on work — and a clean output layer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="resume-section reveal" id="resume">
+  <div class="story-head">
+    <h2>Resume</h2>
+    <p>Education, research, and professional experience — from forestry and geomatics in Nepal to forest biometrics and utility-sector analytics in the US.</p>
+  </div>
+
+  <div class="resume-columns">
+    <div class="resume-col">
+      <h3 class="resume-col-title">Education</h3>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <h4>M.S. in Forest Biometrics</h4>
+          <p class="timeline-meta">College of Forest Resources, Mississippi State University · 2024 – Present</p>
+          <p class="timeline-detail">Thesis: "Machine Learning Approaches to Improve Small Domain Biomass Estimates."</p>
+          <ul>
+            <li>Used the Fay-Herriot model to enhance county-level aboveground forest biomass estimates for Mississippi and Minnesota.</li>
+            <li>Designed a geodatabase for Oktibbeha County, Mississippi.</li>
+            <li>Built a tool to select water sources within a given radius of Mississippi State University's center.</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section skills-section">
-      <div class="section-head reveal">
-        <p class="section-eyebrow">Skills</p>
-        <h2>Advanced expertise in geospatial technologies &amp; automation</h2>
-        <p class="section-sub">
-          Built through professional experience, graduate research, and practical
-          applications across forestry, ecology, and utility analytics.
-        </p>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-bar" data-target="90">
-          <div class="skill-bar-head"><span>ArcGIS suite of products</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="95">
-          <div class="skill-bar-head"><span>Remote sensing</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="85">
-          <div class="skill-bar-head"><span>Python (ArcPy, Pandas, NumPy, GDAL)</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="75">
-          <div class="skill-bar-head"><span>R (tidyverse, mlr, terra, lidR)</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="90">
-          <div class="skill-bar-head"><span>LiDAR &amp; spatial data processing</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="80">
-          <div class="skill-bar-head"><span>Machine learning &amp; data science</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="80">
-          <div class="skill-bar-head"><span>Adobe Creative Suite</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-        <div class="skill-bar" data-target="85">
-          <div class="skill-bar-head"><span>Google Earth Engine &amp; GIS software</span><span class="skill-pct">0%</span></div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="resume" class="section resume-section">
-      <div class="section-head reveal">
-        <p class="section-eyebrow">Resume</p>
-        <h2>Education, research, and professional experience</h2>
-        <p class="section-sub">
-          Cross-disciplinary path from forestry and geomatics in Nepal to forest biometrics
-          and utility-sector geospatial analytics in the US.
-        </p>
-      </div>
-
-      <div class="resume-columns">
-        <div class="resume-col">
-          <h3 class="resume-col-title">Education</h3>
-          <ol class="timeline">
-            <li class="timeline-item reveal">
-              <h4>M.S. in Forest Biometrics</h4>
-              <p class="timeline-meta">College of Forest Resources, Mississippi State University · 2024 – Present</p>
-              <p class="timeline-detail">Thesis: "Machine Learning Approaches to Improve Small Domain Biomass Estimates."</p>
-              <ul>
-                <li>Used the Fay-Herriot model to enhance county-level aboveground forest biomass estimates for Mississippi and Minnesota.</li>
-                <li>Designed a geodatabase for Oktibbeha County, Mississippi.</li>
-                <li>Built a tool to select water sources within a given radius of Mississippi State University's center.</li>
-              </ul>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>B.S. in Forestry</h4>
-              <p class="timeline-meta">Institute of Forestry, Tribhuvan University, Nepal · 2017 – 2022</p>
-              <p class="timeline-detail">Thesis: "Night Echoes in Urban Landscape: Activity and Guild of Bats in Different Habitat Types."</p>
-              <ul>
-                <li>Prepared the community forest operation plan for Sundarban Community Forest, Kapilvastu.</li>
-                <li>Performed watershed prioritization of the Kaligandaki watershed.</li>
-                <li>Developed a local volume table for trees at the Institute of Forestry, Pokhara.</li>
-                <li>Prepared a land-cover change detection map for Tandi, Chitwan.</li>
-              </ul>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Bachelor in Geomatics Engineering</h4>
-              <p class="timeline-meta">IOE Pashchimanchal Campus, Tribhuvan University, Nepal · 2013 – 2017</p>
-              <p class="timeline-detail">Thesis: "Simulation of Flood in Pokhara Valley Due to Seti River."</p>
-              <ul>
-                <li>Implemented the Spectral Angle Mapper algorithm in Python.</li>
-                <li>Performed multispectral satellite image semantic segmentation with a neural network.</li>
-                <li>Built an interactive web map of recreational places in and around Pokhara City.</li>
-                <li>Developed a building-footprint extraction model using SVM.</li>
-                <li>Analyzed spatio-temporal snow-cover change in Nepal with cloud-based remote sensing.</li>
-                <li>Designed a PostgreSQL/PostGIS database of student records with spatial location.</li>
-              </ul>
-            </li>
-          </ol>
-
-          <h3 class="resume-col-title">Research experience</h3>
-          <ol class="timeline">
-            <li class="timeline-item reveal">
-              <h4>Lead Researcher</h4>
-              <p class="timeline-detail">
-                <a href="batstudy.html">Night Echoes in Urban Landscape: Activity and Guild of Bats in Different Habitat Types</a>
-                — hypothesis development, research design, data collection using an Echometer Touch-2 Pro,
-                analysis using Kaleidoscope, Raven Pro, SPSS and Excel, and report writing.
-              </p>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Researcher</h4>
-              <p class="timeline-detail">
-                "Bat diversity in the Banpale forest, Pokhara, Nepal during spring season" — data collection via
-                mist-netting of bats and analysis.
-                <a href="https://doi.org/10.11609/jott.6263.13.6.18479-18489" target="_blank" rel="noopener">doi.org/10.11609/jott.6263.13.6.18479-18489</a>
-              </p>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Research Assistant</h4>
-              <ul>
-                <li>"Exploring the roosting and nesting habitats of Asian Barred Owlet (Glaucidium cuculoides) in Raghuganga Rural Municipality" — bio-physical data collection (Vortex, binoculars, GPS, diameter tape) and dissemination.</li>
-                <li>"Beneficial or harmful: How do local stakeholders perceive bats and caves in mid-hills of Nepal?" — social data collection via household questionnaire survey and open-ended interviews.</li>
-                <li>"Assessment of Kulekhani watershed's health based on water quality" — research design and data analysis using ArcMap.</li>
-              </ul>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Research Field Assistant</h4>
-              <ul>
-                <li>"Bats and Caves: Seasonal Monitoring and Conservation in Kaligandaki Canyon, Nepal" — field data collection (micro-climatic and acoustic) and a conservation seminar for the cave protection committee.</li>
-                <li>"Acoustic Survey and Monitoring to Lay the Foundation for Conservation of the Endemic Csorba's Mouse-Eared Bat (Myotis csorbai) in Nepal" — field data collection (micro-climatic and acoustic).</li>
-                <li>Fruit-eating bat survey in Chepang communities of Kalika Municipality, Chitwan — acoustic data collection (song-meter) across 11 survey stations.</li>
-                <li>Preparation of community forest operation plans for 7 community forests; NTFP inventory in Myagdi District under Division Forest Office, Myagdi.</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-
-        <div class="resume-col">
-          <h3 class="resume-col-title">Professional experience</h3>
-          <ol class="timeline">
-            <li class="timeline-item reveal">
-              <h4>Associate Geospatial Analyst</h4>
-              <p class="timeline-meta">The Spear Group, on behalf of Florida Power &amp; Light · December 2025 – Present</p>
-              <ul>
-                <li>Developed automated LiDAR-to-raster workflows using Python and ArcPy for vegetation-volume quantification and utility corridor management.</li>
-                <li>Generated spatial distribution maps of vegetation volume and removal requirements across utility corridors.</li>
-                <li>Engineered a full-stack LiDAR data retrieval application using Python, R Shiny, SQLite, and spatial indexing.</li>
-                <li>Automated processing of 14,000+ high-resolution LiDAR tiles for raster generation and feature extraction.</li>
-                <li>Co-led a 38,616+ mile positional accuracy assessment of an electric utility network using LiDAR and spatial statistics.</li>
-                <li>Developed spatial analyses for vegetation encroachment forecasting and infrastructure planning.</li>
-              </ul>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Graduate Teaching / Research Assistant</h4>
-              <p class="timeline-meta">Forest Biometrics Lab, Mississippi State University · January 2024 – December 2025</p>
-              <ul>
-                <li>Conducted a literature review of small-area estimation techniques and advanced statistical methods for forest biomass analysis.</li>
-                <li>Automated preprocessing of large-scale forest inventory datasets using Python in ArcGIS Pro.</li>
-                <li>Developed machine learning models within a GIS framework using <code>mlr</code> to predict forest attributes.</li>
-                <li>Co-instructed undergraduate lab sessions on sampling design and forest inventory techniques.</li>
-              </ul>
-            </li>
-            <li class="timeline-item reveal">
-              <h4>Research Assistant</h4>
-              <p class="timeline-meta">NAAMII, Lalitpur, Nepal · September 2023 – December 2023</p>
-              <ul>
-                <li>Led a tree species classification project using YOLOv5 and high-resolution satellite imagery.</li>
-                <li>Managed all stages from ground-truth data collection to model evaluation.</li>
-              </ul>
-            </li>
-          </ol>
-
-          <h3 class="resume-col-title">Training &amp; certification</h3>
-          <ul class="cert-list reveal">
-            <li>Species Distribution Modeling with Remote Sensing — Webinar, NASA ARSET</li>
-            <li>Satellite Observations and Tools for Fire Risk, Detection, and Analysis — Webinar, NASA ARSET</li>
-            <li>Fundamentals of GIS — UC Davis, Coursera</li>
-            <li>Wildlife Research Techniques Training (19 days, 2020) — Friends of Nature (FON), Nepal</li>
-            <li>Python Basics — Michigan State University, Coursera</li>
-            <li>Spatial Data Science: The New Frontier in Analytics — MOOC, Esri</li>
-            <li>Going Places with Spatial Analysis — MOOC, Esri</li>
+        </li>
+        <li class="timeline-item">
+          <h4>B.S. in Forestry</h4>
+          <p class="timeline-meta">Institute of Forestry, Tribhuvan University, Nepal · 2017 – 2022</p>
+          <p class="timeline-detail">Thesis: "Night Echoes in Urban Landscape: Activity and Guild of Bats in Different Habitat Types."</p>
+          <ul>
+            <li>Prepared the community forest operation plan for Sundarban Community Forest, Kapilvastu.</li>
+            <li>Performed watershed prioritization of the Kaligandaki watershed.</li>
+            <li>Developed a local volume table for trees at the Institute of Forestry, Pokhara.</li>
+            <li>Prepared a land-cover change detection map for Tandi, Chitwan.</li>
           </ul>
-        </div>
-      </div>
-    </section>
+        </li>
+        <li class="timeline-item">
+          <h4>Bachelor in Geomatics Engineering</h4>
+          <p class="timeline-meta">IOE Pashchimanchal Campus, Tribhuvan University, Nepal · 2013 – 2017</p>
+          <p class="timeline-detail">Thesis: "Simulation of Flood in Pokhara Valley Due to Seti River."</p>
+          <ul>
+            <li>Implemented the Spectral Angle Mapper algorithm in Python.</li>
+            <li>Performed multispectral satellite image semantic segmentation with a neural network.</li>
+            <li>Built an interactive web map of recreational places in and around Pokhara City.</li>
+            <li>Developed a building-footprint extraction model using SVM.</li>
+            <li>Analyzed spatio-temporal snow-cover change in Nepal with cloud-based remote sensing.</li>
+            <li>Designed a PostgreSQL/PostGIS database of student records with spatial location.</li>
+          </ul>
+        </li>
+      </ol>
 
-    <section id="portfolio" class="section portfolio-section">
-      <div class="section-head reveal">
-        <p class="section-eyebrow">Portfolio</p>
-        <h2>Selected projects</h2>
-        <p class="section-sub">
-          Geospatial analysis, LiDAR processing, remote sensing, machine learning, and
-          spatial-data automation — practical applications in environmental analysis and
-          infrastructure planning.
-        </p>
-      </div>
+      <h3 class="resume-col-title">Research experience</h3>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <h4>Lead Researcher</h4>
+          <p class="timeline-detail">
+            <a href="batstudy.html">Night Echoes in Urban Landscape: Activity and Guild of Bats in Different Habitat Types</a>
+            — hypothesis development, research design, data collection using an Echometer Touch-2 Pro,
+            analysis using Kaleidoscope, Raven Pro, SPSS and Excel, and report writing.
+          </p>
+        </li>
+        <li class="timeline-item">
+          <h4>Researcher</h4>
+          <p class="timeline-detail">
+            "Bat diversity in the Banpale forest, Pokhara, Nepal during spring season" — data collection via
+            mist-netting of bats and analysis.
+            <a href="https://doi.org/10.11609/jott.6263.13.6.18479-18489" target="_blank" rel="noopener">doi.org/10.11609/jott.6263.13.6.18479-18489</a>
+          </p>
+        </li>
+        <li class="timeline-item">
+          <h4>Research Assistant</h4>
+          <ul>
+            <li>"Exploring the roosting and nesting habitats of Asian Barred Owlet (Glaucidium cuculoides) in Raghuganga Rural Municipality" — bio-physical data collection (Vortex, binoculars, GPS, diameter tape) and dissemination.</li>
+            <li>"Beneficial or harmful: How do local stakeholders perceive bats and caves in mid-hills of Nepal?" — social data collection via household questionnaire survey and open-ended interviews.</li>
+            <li>"Assessment of Kulekhani watershed's health based on water quality" — research design and data analysis using ArcMap.</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <h4>Research Field Assistant</h4>
+          <ul>
+            <li>"Bats and Caves: Seasonal Monitoring and Conservation in Kaligandaki Canyon, Nepal" — field data collection (micro-climatic and acoustic) and a conservation seminar for the cave protection committee.</li>
+            <li>"Acoustic Survey and Monitoring to Lay the Foundation for Conservation of the Endemic Csorba's Mouse-Eared Bat (Myotis csorbai) in Nepal" — field data collection (micro-climatic and acoustic).</li>
+            <li>Fruit-eating bat survey in Chepang communities of Kalika Municipality, Chitwan — acoustic data collection (song-meter) across 11 survey stations.</li>
+            <li>Preparation of community forest operation plans for 7 community forests; NTFP inventory in Myagdi District under Division Forest Office, Myagdi.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
 
-      <div class="filter-tabs reveal" id="filter-tabs">
-        <button type="button" class="filter-tab active" data-filter="all">All</button>
-        <button type="button" class="filter-tab" data-filter="development">Development</button>
-        <button type="button" class="filter-tab" data-filter="gis">Remote Sensing &amp; GIS</button>
-        <button type="button" class="filter-tab" data-filter="ml">Machine Learning</button>
-      </div>
+    <div class="resume-col">
+      <h3 class="resume-col-title">Professional experience</h3>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <h4>Associate Geospatial Analyst</h4>
+          <p class="timeline-meta">The Spear Group, on behalf of Florida Power &amp; Light · December 2025 – Present</p>
+          <ul>
+            <li>Developed automated LiDAR-to-raster workflows using Python and ArcPy for vegetation-volume quantification and utility corridor management.</li>
+            <li>Generated spatial distribution maps of vegetation volume and removal requirements across utility corridors.</li>
+            <li>Engineered a full-stack LiDAR data retrieval application using Python, R Shiny, SQLite, and spatial indexing.</li>
+            <li>Automated processing of 14,000+ high-resolution LiDAR tiles for raster generation and feature extraction.</li>
+            <li>Co-led a 38,616+ mile positional accuracy assessment of an electric utility network using LiDAR and spatial statistics.</li>
+            <li>Developed spatial analyses for vegetation encroachment forecasting and infrastructure planning.</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <h4>Graduate Teaching / Research Assistant</h4>
+          <p class="timeline-meta">Forest Biometrics Lab, Mississippi State University · January 2024 – December 2025</p>
+          <ul>
+            <li>Conducted a literature review of small-area estimation techniques and advanced statistical methods for forest biomass analysis.</li>
+            <li>Automated preprocessing of large-scale forest inventory datasets using Python in ArcGIS Pro.</li>
+            <li>Developed machine learning models within a GIS framework using <code>mlr</code> to predict forest attributes.</li>
+            <li>Co-instructed undergraduate lab sessions on sampling design and forest inventory techniques.</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <h4>Research Assistant</h4>
+          <p class="timeline-meta">NAAMII, Lalitpur, Nepal · September 2023 – December 2023</p>
+          <ul>
+            <li>Led a tree species classification project using YOLOv5 and high-resolution satellite imagery.</li>
+            <li>Managed all stages from ground-truth data collection to model evaluation.</li>
+          </ul>
+        </li>
+      </ol>
 
-      <div class="portfolio-grid reveal" id="portfolio-grid"></div>
-    </section>
+      <h3 class="resume-col-title">Training &amp; certification</h3>
+      <ul class="cert-list">
+        <li>Species Distribution Modeling with Remote Sensing — Webinar, NASA ARSET</li>
+        <li>Satellite Observations and Tools for Fire Risk, Detection, and Analysis — Webinar, NASA ARSET</li>
+        <li>Fundamentals of GIS — UC Davis, Coursera</li>
+        <li>Wildlife Research Techniques Training (19 days, 2020) — Friends of Nature (FON), Nepal</li>
+        <li>Python Basics — Michigan State University, Coursera</li>
+        <li>Spatial Data Science: The New Frontier in Analytics — MOOC, Esri</li>
+        <li>Going Places with Spatial Analysis — MOOC, Esri</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="section contact-section reveal">
-      <p class="section-eyebrow">Contact</p>
-      <h2>Let's talk about data, maps, or forests.</h2>
-      <a class="contact-email" href="mailto:dh.prtsh@gmail.com">dh.prtsh@gmail.com</a>
-      <p class="contact-location">Florida, USA</p>
-      <div class="hero-links contact-links">
-        <a href="https://github.com/pratyush-dh" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/pratyush-dh" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.82 0H1.18C.53 0 0 .52 0 1.16v13.68C0 15.48.53 16 1.18 16h13.64c.65 0 1.18-.52 1.18-1.16V1.16C16 .52 15.47 0 14.82 0zM4.75 13.63H2.38V6.15h2.38v7.48zM3.56 5.13a1.38 1.38 0 110-2.75 1.38 1.38 0 010 2.75zm10.07 8.5h-2.37V9.99c0-.87-.02-1.99-1.21-1.99-1.22 0-1.4.95-1.4 1.93v3.7H6.28V6.15h2.28v1.02h.03c.32-.6 1.09-1.23 2.24-1.23 2.4 0 2.84 1.58 2.84 3.63v4.06z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-    </section>
-  </main>
+<!-- PORTFOLIO -->
+<section class="portfolio-section reveal" id="portfolio">
+  <div class="story-head">
+    <h2>Selected projects</h2>
+    <p>Geospatial analysis, LiDAR processing, remote sensing, machine learning, and spatial-data automation — thirteen projects across environmental analysis and infrastructure planning.</p>
+  </div>
 
-  <footer class="site-footer">
-    <span>&copy; <span id="year"></span> Pratyush Dhungana</span>
-    <span class="footer-sep">&middot;</span>
-    <span>Seek progress, not perfection.</span>
-  </footer>
+  <div class="filter-tabs" id="filter-tabs">
+    <button type="button" class="filter-tab active" data-filter="all">All</button>
+    <button type="button" class="filter-tab" data-filter="development">Development</button>
+    <button type="button" class="filter-tab" data-filter="gis">Remote Sensing &amp; GIS</button>
+    <button type="button" class="filter-tab" data-filter="ml">Machine Learning</button>
+  </div>
 
-  <script src="app.js"></script>
+  <div class="portfolio-grid" id="portfolio-grid"></div>
+</section>
+
+<!-- FINALE -->
+<section class="finale reveal" id="finale">
+  <h2>Have a forest, a dataset, or a problem to quantify?</h2>
+  <div class="finale-actions">
+    <a class="finale-btn primary" href="#resume">
+      <span class="label">View my resume</span>
+      <span class="sub">Education, experience, research</span>
+    </a>
+    <a class="finale-btn" href="#portfolio">
+      <span class="label">View my projects</span>
+      <span class="sub">Biomass, GIS, and remote sensing work</span>
+    </a>
+  </div>
+  <div class="finale-contact">
+    <div><a href="mailto:dh.prtsh@gmail.com">dh.prtsh@gmail.com</a></div>
+    <div><a href="https://www.linkedin.com/in/pratyush-dh" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/pratyush-dh" target="_blank" rel="noopener">GitHub</a></div>
+    <div>Florida, USA</div>
+    <div class="closing">Seek progress, not perfection.</div>
+  </div>
+</section>
+
+<footer>&copy; <span id="year"></span> Pratyush Dhungana</footer>
+
+<script src="app.js"></script>
 </body>
 </html>

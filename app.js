@@ -1,166 +1,58 @@
 (() => {
   "use strict";
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // --- Scroll progress bar + sticky header shadow ---
-  const progress = document.getElementById("scroll-progress");
-  const header = document.querySelector(".site-header");
+  // hero thumbnail fade-in (single load moment)
+  document.querySelectorAll('#hero-strip img').forEach((img, i) => {
+    setTimeout(() => img.classList.add('in'), 600 + i * 90);
+  });
 
-  function onScroll() {
-    const doc = document.documentElement;
-    const scrollable = doc.scrollHeight - doc.clientHeight;
-    const pct = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
-    progress.style.width = pct + "%";
-    header.classList.toggle("scrolled", doc.scrollTop > 8);
-  }
-  document.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  // --- Mobile nav toggle ---
-  const navToggle = document.getElementById("nav-toggle");
-  const siteNav = document.getElementById("site-nav");
-  if (navToggle && siteNav) {
-    navToggle.addEventListener("click", () => {
-      const open = siteNav.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", String(open));
-    });
-    siteNav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        siteNav.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      })
-    );
-  }
-
-  // --- Typed rotating role text ---
-  const typedEl = document.getElementById("typed-role");
-  const roles = ["Data Scientist", "Geospatial Specialist", "Forest Analytics Expert"];
-  if (typedEl) {
-    if (reduceMotion) {
-      typedEl.textContent = roles[0];
-    } else {
-      let roleIndex = 0;
-      let charIndex = 0;
-      let deleting = false;
-
-      function tick() {
-        const word = roles[roleIndex];
-        if (!deleting) {
-          charIndex++;
-          typedEl.textContent = word.slice(0, charIndex);
-          if (charIndex === word.length) {
-            deleting = true;
-            return setTimeout(tick, 1400);
-          }
-        } else {
-          charIndex--;
-          typedEl.textContent = word.slice(0, charIndex);
-          if (charIndex === 0) {
-            deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-          }
-        }
-        setTimeout(tick, deleting ? 40 : 70);
+  // one clean reveal per section: about media/copy + every .reveal section
+  const singleReveal = document.querySelectorAll('#about-img, #about-copy, .reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
       }
-      tick();
-    }
-  }
+    });
+  }, { threshold: 0.2 });
+  singleReveal.forEach(el => io.observe(el));
 
-  // --- Reveal on scroll ---
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !reduceMotion) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            io.unobserve(entry.target);
-          }
-        }
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("in-view"));
-  }
+  // hero fade on scroll (the one signature scroll moment)
+  const heroInner = document.querySelector('.hero-inner');
+  window.addEventListener('scroll', () => {
+    const vh = window.innerHeight;
+    const progress = Math.min(window.scrollY / (vh * 0.8), 1);
+    heroInner.style.opacity = 1 - progress;
+    heroInner.style.transform = `translateY(${-progress * 30}px)`;
+  }, { passive: true });
 
-  // --- Count-up stats ---
-  const countEls = document.querySelectorAll("[data-count-to]");
-  function animateCount(el) {
-    const target = parseFloat(el.dataset.countTo);
-    const suffix = el.dataset.suffix || "";
-    if (reduceMotion) {
-      el.textContent = target.toLocaleString() + suffix;
-      return;
-    }
-    const duration = 1100;
-    const start = performance.now();
-    function tick(now) {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(target * eased).toLocaleString() + suffix;
-      if (t < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  if ("IntersectionObserver" in window) {
-    const countIo = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            countIo.unobserve(entry.target);
-          }
-        }
-      },
-      { threshold: 0.6 }
-    );
-    countEls.forEach((el) => countIo.observe(el));
-  } else {
-    countEls.forEach(animateCount);
-  }
+  // capabilities pinned crossfade — the core scroll-driven narrative
+  const capWrap = document.getElementById('capabilities');
+  const capBgImgs = document.querySelectorAll('.cap-bg img');
+  const capPanels = document.querySelectorAll('.cap-panel');
+  const capDots = document.querySelectorAll('.dot-row');
+  let lastIndex = -1;
 
-  // --- Skill bar fill on reveal ---
-  const skillBars = document.querySelectorAll(".skill-bar");
-  function fillSkillBar(bar) {
-    const target = parseInt(bar.dataset.target, 10);
-    const fill = bar.querySelector(".skill-fill");
-    const pct = bar.querySelector(".skill-pct");
-    if (reduceMotion) {
-      fill.style.width = target + "%";
-      pct.textContent = target + "%";
-      return;
+  function updateCapabilities() {
+    const rect = capWrap.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = capWrap.offsetHeight - vh;
+    const scrolled = -rect.top;
+    let progress = total > 0 ? scrolled / total : 0;
+    progress = Math.max(0, Math.min(1, progress));
+    let index = Math.min(3, Math.max(0, Math.floor(progress * 4)));
+    if (index !== lastIndex) {
+      capBgImgs.forEach(img => img.classList.toggle('active', +img.dataset.i === index));
+      capPanels.forEach(p => p.classList.toggle('active', +p.dataset.i === index));
+      capDots.forEach(d => d.classList.toggle('active', +d.dataset.i === index));
+      lastIndex = index;
     }
-    fill.style.width = target + "%";
-    const duration = 1100;
-    const start = performance.now();
-    function tick(now) {
-      const t = Math.min(1, (now - start) / duration);
-      pct.textContent = Math.round(target * t) + "%";
-      if (t < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
   }
-  if ("IntersectionObserver" in window) {
-    const skillIo = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            fillSkillBar(entry.target);
-            skillIo.unobserve(entry.target);
-          }
-        }
-      },
-      { threshold: 0.4 }
-    );
-    skillBars.forEach((bar) => skillIo.observe(bar));
-  } else {
-    skillBars.forEach(fillSkillBar);
-  }
+  window.addEventListener('scroll', updateCapabilities, { passive: true });
+  updateCapabilities();
 
   // --- Portfolio data + render + filter ---
   const projects = [
@@ -289,9 +181,9 @@
       .map((p) => {
         const categoryLabel = { gis: "Remote Sensing & GIS", ml: "Machine Learning", development: "Development" }[p.category];
         const links = [
-          p.live ? `<a class="btn btn-small btn-primary" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : "",
-          p.details ? `<a class="btn btn-small btn-ghost" href="${p.details}">Details</a>` : "",
-          p.source ? `<a class="btn btn-small btn-ghost" href="${p.source}" target="_blank" rel="noopener">Source</a>` : "",
+          p.live ? `<a class="primary" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : "",
+          p.details ? `<a href="${p.details}">Details</a>` : "",
+          p.source ? `<a href="${p.source}" target="_blank" rel="noopener">Source</a>` : "",
         ].join("");
         return `
         <article class="portfolio-card" data-category="${p.category}">
@@ -320,66 +212,5 @@
         card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter);
       });
     });
-  }
-
-  // --- Animated contour-line hero background ---
-  const canvas = document.getElementById("contour-canvas");
-  if (canvas) {
-    const ctx = canvas.getContext("2d");
-    let width, height, dpr;
-    const lines = 14;
-
-    function resize() {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = canvas.clientWidth;
-      height = canvas.clientHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    const styles = getComputedStyle(document.documentElement);
-    function color(name) {
-      return styles.getPropertyValue(name).trim();
-    }
-
-    function drawFrame(t) {
-      ctx.clearRect(0, 0, width, height);
-      const accent = color("--accent");
-      const accent2 = color("--accent-2");
-      const baseline = color("--baseline");
-
-      for (let i = 0; i < lines; i++) {
-        const yBase = (height / lines) * i + height * 0.06;
-        const amp = 18 + (i % 4) * 6;
-        const freq = 0.006 + (i % 3) * 0.0015;
-        const phase = t * 0.00012 + i * 0.6;
-
-        ctx.beginPath();
-        for (let x = 0; x <= width; x += 8) {
-          const y = yBase + Math.sin(x * freq + phase) * amp + Math.sin(x * freq * 2.3 - phase * 1.4) * (amp * 0.3);
-          if (x === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = i % 5 === 0 ? accent2 : i % 3 === 0 ? accent : baseline;
-        ctx.globalAlpha = i % 5 === 0 ? 0.35 : i % 3 === 0 ? 0.3 : 0.22;
-        ctx.stroke();
-      }
-      ctx.globalAlpha = 1;
-    }
-
-    resize();
-    window.addEventListener("resize", resize);
-
-    if (reduceMotion) {
-      drawFrame(0);
-    } else {
-      function loop(t) {
-        drawFrame(t);
-        requestAnimationFrame(loop);
-      }
-      requestAnimationFrame(loop);
-    }
   }
 })();

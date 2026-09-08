@@ -505,7 +505,10 @@ body.overlay-open{ overflow:hidden; }
 footer{
   text-align:center; padding:2rem; color:var(--ink-faint); font-size:0.82rem;
   background:var(--bg-deep);
+  display:flex; flex-direction:column; align-items:center; gap:1rem;
 }
+.visitor-counter{ opacity:0.9; }
+.visitor-counter img{ display:block; }
 
 @media (prefers-reduced-motion: reduce){
   .hero-inner{ opacity:1 !important; transform:none !important; animation:none !important; }

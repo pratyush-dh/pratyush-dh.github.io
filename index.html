@@ -14,13 +14,12 @@
 <body>
 
 <nav class="nav">
-  <a class="nav-brand" href="#hero">Pratyush Dhungana</a>
+  <a class="nav-brand" href="#hero"><span class="full">Pratyush Dhungana</span><span class="short">PD</span></a>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#capabilities">Capabilities</a>
-    <a href="#resume">Resume</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#vision">Vision</a>
+    <a href="#" data-open="resume-panel">Resume</a>
+    <a href="#" data-open="portfolio-panel">Portfolio</a>
     <a href="#finale">Contact</a>
   </div>
 </nav>
@@ -29,7 +28,7 @@
 <section class="hero" id="hero">
   <div class="hero-inner">
     <h1>Pratyush Dhungana</h1>
-    <p class="tagline">Measuring what grows — from satellite to soil.</p>
+    <p class="tagline">Turning data into decisions.</p>
     <div class="hero-strip" id="hero-strip">
       <img src="assets/img/portfolio/equalearth1.png" alt="" />
       <img src="assets/img/portfolio/model1.jpg" alt="" />
@@ -50,46 +49,59 @@
     <div class="role">Data scientist — forest biometrics, geospatial analytics, and forest carbon</div>
     <div class="desc">I build the pipelines that turn LiDAR, remote sensing, and forest inventory data into biomass, carbon, and management insight — trained at Mississippi State's Forest Biometrics Lab, applied at industry scale.</div>
     <div class="loc">Based in Florida, USA. Originally from Pokhara, Nepal.</div>
-    <div class="desc small">This is a short walk through the kind of problems I solve, and how — followed by the full resume and project archive below.</div>
+    <div class="desc small">This is a short walk through the kind of problems I solve, and how — the full resume and project archive are one click away at the end.</div>
   </div>
 </section>
 
 <!-- CAPABILITIES -->
 <section class="cap-wrap" id="capabilities">
   <div class="cap-sticky">
-    <div class="cap-bg">
-      <img data-i="0" src="assets/img/portfolio/equalearth1.png" alt="" />
-      <img data-i="1" src="assets/img/portfolio/model1.jpg" alt="" />
-      <img data-i="2" src="assets/img/portfolio/lulc1.jpg" alt="" />
-      <img data-i="3" src="assets/img/portfolio/swimmingpool3.jpg" alt="" />
+    <div class="cap-panel" data-i="0">
+      <div class="cap-media">
+        <img src="assets/img/vision/ar-field-inventory.jpg" alt="Concept render: AR-projected LiDAR growth-and-yield visualization during a field inventory" />
+        <span class="concept-tag cap-concept-tag">Concept</span>
+      </div>
+      <div class="cap-text">
+        <div class="cap-content">
+          <h3>Forest Data Scientist</h3>
+          <p class="cap-subtitle">Advanced Forest Inventory, Growth &amp; Yield Modelling, Forest Biometrics and Measurements</p>
+          <p>Your forest inventory tells you what a handful of plots look like. I build statistical models — small area estimation, mixed-effects, machine learning — that turn those plots into reliable biomass and volume estimates for every county, stand, or parcel you manage.</p>
+          <span class="cap-chip">Thesis: Small area estimation methods for county-level forest biomass estimation</span>
+        </div>
+      </div>
     </div>
-    <div class="cap-content">
-      <div class="cap-panel" data-i="0">
-        <h3>Forest Data Scientist</h3>
-        <p>Your forest inventory tells you what a handful of plots look like. I build statistical models — small area estimation, mixed-effects, machine learning — that turn those plots into reliable biomass and volume estimates for every county, stand, or parcel you manage.</p>
-        <span class="cap-chip">Thesis: small-domain biomass estimates across Mississippi &amp; Minnesota</span>
+    <div class="cap-panel" data-i="1">
+      <div class="cap-media">
+        <img src="assets/img/vision/wildfire-decision-support.jpg" alt="Concept render: wildfire incident command reviewing an optimized-routing and fire-behavior dashboard" />
+        <span class="concept-tag cap-concept-tag">Concept</span>
       </div>
-      <div class="cap-panel" data-i="1">
-        <h3>Geospatial Analyst</h3>
-        <p>Spatial data scattered across shapefiles, LiDAR tiles, and field surveys doesn't help anyone decide anything. I build the GIS pipelines, ArcPy toolboxes, and spatial databases that turn that mess into fast, repeatable analysis.</p>
-        <span class="cap-chip">Automated LiDAR-to-raster workflows for utility corridor management</span>
+      <div class="cap-text">
+        <div class="cap-content">
+          <h3>Geospatial Analyst</h3>
+          <p class="cap-subtitle">GIS Pipelines, Spatial Databases, ArcPy Automation and Decision-Support Mapping</p>
+          <p>Spatial data scattered across shapefiles, LiDAR tiles, and field surveys doesn't help anyone decide anything. I build the GIS pipelines, ArcPy toolboxes, and spatial databases that turn that mess into fast, repeatable analysis.</p>
+          <span class="cap-chip">Automated LiDAR-to-raster workflows for utility corridor management</span>
+        </div>
       </div>
-      <div class="cap-panel" data-i="2">
-        <h3>Remote Sensing Specialist</h3>
-        <p>No field crew can manually check every acre of canopy or every mile of utility corridor. I train models on LiDAR and satellite imagery to detect, classify, and monitor change automatically, at a scale field work can't match.</p>
-        <span class="cap-chip">38,616+ mile positional accuracy assessment, LiDAR &amp; spatial statistics</span>
+    </div>
+    <div class="cap-panel" data-i="2">
+      <div class="cap-media">
+        <img src="assets/img/vision/carbon-mrv-reporting.jpg" alt="Concept render: presenting a carbon sequestration potential map and MRV verification protocol" />
+        <span class="concept-tag cap-concept-tag">Concept</span>
       </div>
-      <div class="cap-panel" data-i="3">
-        <h3>Machine Learning Engineer</h3>
-        <p>From satellite classification to object detection, I take a model from a research notebook to something that runs on real imagery at scale — transfer learning, careful validation, and a deployable result at the end.</p>
-        <span class="cap-chip">14,000+ LiDAR tiles automated for feature extraction</span>
+      <div class="cap-text">
+        <div class="cap-content">
+          <h3>Remote Sensing Specialist</h3>
+          <p class="cap-subtitle">Satellite &amp; LiDAR Remote Sensing, Change Detection and Canopy Monitoring</p>
+          <p>No field crew can manually check every acre of canopy or every mile of utility corridor. I train models on LiDAR and satellite imagery to detect, classify, and monitor change automatically, at a scale field work can't match.</p>
+          <span class="cap-chip">38,616+ mile positional accuracy assessment, LiDAR &amp; spatial statistics</span>
+        </div>
       </div>
     </div>
     <div class="cap-index" id="cap-index">
       <div class="dot-row" data-i="0"><span class="num">01</span><span class="dot"></span></div>
       <div class="dot-row" data-i="1"><span class="num">02</span><span class="dot"></span></div>
       <div class="dot-row" data-i="2"><span class="num">03</span><span class="dot"></span></div>
-      <div class="dot-row" data-i="3"><span class="num">04</span><span class="dot"></span></div>
     </div>
   </div>
 </section>
@@ -138,7 +150,8 @@
 </section>
 
 <!-- RESUME -->
-<section class="resume-section reveal" id="resume">
+<section class="overlay-panel resume-section" id="resume-panel">
+  <button type="button" class="overlay-back" data-close>&larr; Back</button>
   <div class="story-head">
     <h2>Resume</h2>
     <p>Education, research, and professional experience — from forestry and geomatics in Nepal to forest biometrics and utility-sector analytics in the US.</p>
@@ -272,7 +285,8 @@
 </section>
 
 <!-- PORTFOLIO -->
-<section class="portfolio-section reveal" id="portfolio">
+<section class="overlay-panel portfolio-section" id="portfolio-panel">
+  <button type="button" class="overlay-back" data-close>&larr; Back</button>
   <div class="story-head">
     <h2>Selected projects</h2>
     <p>Geospatial analysis, LiDAR processing, remote sensing, machine learning, and spatial-data automation — thirteen projects across environmental analysis and infrastructure planning.</p>
@@ -288,43 +302,15 @@
   <div class="portfolio-grid" id="portfolio-grid"></div>
 </section>
 
-<!-- VISION -->
-<section class="vision reveal" id="vision">
-  <div class="story-head">
-    <h2>Where this could go</h2>
-    <p class="vision-disclaimer">AI-generated concept renders, not documentation of completed work — a look at the kind of decision-support tools this background could extend toward.</p>
-  </div>
-  <div class="vision-grid">
-    <div class="vision-card">
-      <span class="concept-tag">Concept</span>
-      <img src="assets/img/vision/wildfire-decision-support.jpg" alt="Concept render: wildfire incident command reviewing an optimized-routing and fire-behavior dashboard" />
-      <h4>Wildfire decision support</h4>
-      <p>Real-time optimized routing and fire-behavior modeling on a shared display for incident command.</p>
-    </div>
-    <div class="vision-card">
-      <span class="concept-tag">Concept</span>
-      <img src="assets/img/vision/carbon-mrv-reporting.jpg" alt="Concept render: presenting a carbon sequestration potential map and MRV verification protocol" />
-      <h4>Carbon MRV reporting</h4>
-      <p>Defensible carbon-sequestration maps and verification protocols, presented in a form stakeholders can act on.</p>
-    </div>
-    <div class="vision-card">
-      <span class="concept-tag">Concept</span>
-      <img src="assets/img/vision/ar-field-inventory.jpg" alt="Concept render: AR-projected LiDAR growth-and-yield visualization during a field inventory" />
-      <h4>AR-assisted field inventory</h4>
-      <p>LiDAR-derived growth-and-yield models visualized in the field, next to the instruments collecting the data.</p>
-    </div>
-  </div>
-</section>
-
 <!-- FINALE -->
 <section class="finale reveal" id="finale">
   <h2>Have a forest, a dataset, or a problem to quantify?</h2>
   <div class="finale-actions">
-    <a class="finale-btn primary" href="#resume">
+    <a class="finale-btn primary" href="#" data-open="resume-panel">
       <span class="label">View my resume</span>
       <span class="sub">Education, experience, research</span>
     </a>
-    <a class="finale-btn" href="#portfolio">
+    <a class="finale-btn" href="#" data-open="portfolio-panel">
       <span class="label">View my projects</span>
       <span class="sub">Biomass, GIS, and remote sensing work</span>
     </a>

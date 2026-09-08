@@ -31,21 +31,22 @@
 
   // capabilities pinned crossfade — the core scroll-driven narrative
   const capWrap = document.getElementById('capabilities');
-  const capBgImgs = document.querySelectorAll('.cap-bg img');
   const capPanels = document.querySelectorAll('.cap-panel');
   const capDots = document.querySelectorAll('.dot-row');
+  const CAP_PANEL_COUNT = capPanels.length;
+  const isMobileCap = () => window.matchMedia('(max-width: 820px)').matches;
   let lastIndex = -1;
 
   function updateCapabilities() {
+    if (isMobileCap()) return; // stacked, non-pinned layout on mobile — no JS toggling needed
     const rect = capWrap.getBoundingClientRect();
     const vh = window.innerHeight;
     const total = capWrap.offsetHeight - vh;
     const scrolled = -rect.top;
     let progress = total > 0 ? scrolled / total : 0;
     progress = Math.max(0, Math.min(1, progress));
-    let index = Math.min(3, Math.max(0, Math.floor(progress * 4)));
+    let index = Math.min(CAP_PANEL_COUNT - 1, Math.max(0, Math.floor(progress * CAP_PANEL_COUNT)));
     if (index !== lastIndex) {
-      capBgImgs.forEach(img => img.classList.toggle('active', +img.dataset.i === index));
       capPanels.forEach(p => p.classList.toggle('active', +p.dataset.i === index));
       capDots.forEach(d => d.classList.toggle('active', +d.dataset.i === index));
       lastIndex = index;
@@ -53,6 +54,32 @@
   }
   window.addEventListener('scroll', updateCapabilities, { passive: true });
   updateCapabilities();
+
+  // --- Resume / Portfolio expand-on-click overlays ---
+  const overlayPanels = document.querySelectorAll('.overlay-panel');
+  function openOverlay(id) {
+    const panel = document.getElementById(id);
+    if (!panel) return;
+    overlayPanels.forEach(p => p.classList.remove('open'));
+    panel.classList.add('open');
+    document.body.classList.add('overlay-open');
+  }
+  function closeOverlays() {
+    overlayPanels.forEach(p => p.classList.remove('open'));
+    document.body.classList.remove('overlay-open');
+  }
+  document.querySelectorAll('[data-open]').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openOverlay(trigger.dataset.open);
+    });
+  });
+  document.querySelectorAll('[data-close]').forEach((btn) => {
+    btn.addEventListener('click', closeOverlays);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeOverlays();
+  });
 
   // --- Portfolio data + render + filter ---
   const projects = [

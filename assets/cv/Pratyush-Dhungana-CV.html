@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pratyush Dhungana — Curriculum Vitae</title>
+<style>
+  @page {
+    size: A4;
+    margin: 14mm 15mm 16mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Calibri", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.3;
+    color: #1c1c1c;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a { color: #1b4332; text-decoration: none; }
+
+  header {
+    border-bottom: 2.5pt solid #1b4332;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+
+  h1 {
+    font-size: 21pt;
+    letter-spacing: 1.2pt;
+    margin: 0 0 2pt;
+    color: #14351f;
+    font-weight: 700;
+  }
+
+  .role {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #2d6a4f;
+    margin: 0 0 5pt;
+    letter-spacing: 0.3pt;
+  }
+
+  .contact {
+    font-size: 8.8pt;
+    color: #3f3f3f;
+    line-height: 1.55;
+  }
+
+  .contact span { white-space: nowrap; }
+  .contact .sep { color: #9bb4a7; margin: 0 6pt; }
+
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: #14351f;
+    border-bottom: 1pt solid #b9cdc0;
+    padding-bottom: 2.5pt;
+    margin: 9pt 0 4pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  section { page-break-inside: auto; }
+
+  .entry {
+    margin-bottom: 6pt;
+  }
+
+  .entry.keep {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .entry-head, .entry-org { page-break-after: avoid; break-after: avoid; }
+
+  li { page-break-inside: avoid; break-inside: avoid; }
+
+  .entry-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1c1c1c;
+  }
+
+  .entry-date {
+    font-size: 8.8pt;
+    font-weight: 600;
+    color: #2d6a4f;
+    white-space: nowrap;
+  }
+
+  .entry-org {
+    font-size: 9pt;
+    font-style: italic;
+    color: #555;
+    margin: 1pt 0 3pt;
+  }
+
+  ul {
+    margin: 3pt 0 0;
+    padding-left: 15pt;
+  }
+
+  li { margin-bottom: 2.5pt; }
+
+  p { margin: 0 0 5pt; }
+
+  .skills-row {
+    margin-bottom: 4pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .skills-row .label {
+    font-weight: 700;
+    color: #14351f;
+  }
+
+  .two-col {
+    column-count: 2;
+    column-gap: 20pt;
+  }
+  .two-col .entry { break-inside: avoid; }
+
+  .compact li { margin-bottom: 1.5pt; }
+
+  .note { font-size: 8.5pt; color: #6b6b6b; margin-top: 2pt; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>PRATYUSH DHUNGANA</h1>
+  <p class="role">Geospatial Data Scientist &amp; GIS Automation Engineer &nbsp;|&nbsp; Forest Biometrics &nbsp;|&nbsp; Timberland Planning</p>
+  <div class="contact">
+    <span>West Palm Beach, FL</span><span class="sep">&bull;</span>
+    <span>662-497-0143</span><span class="sep">&bull;</span>
+    <span>dh.prtsh@gmail.com</span><span class="sep">&bull;</span>
+    <span>linkedin.com/in/pratyush-dh</span><span class="sep">&bull;</span>
+    <span>github.com/pratyush-dh</span><span class="sep">&bull;</span>
+    <span>pratyush-dh.github.io</span>
+  </div>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p>Geospatial data scientist and GIS automation engineer with a forestry and natural-resources foundation and an M.S. in Forest Biometrics. Build the custom ArcPy toolboxes, automated geoprocessing pipelines, enterprise GIS workflows, and statistical models that turn LiDAR, remote sensing, and forest-inventory data into operational decisions &mdash; across forestry research at Mississippi State&rsquo;s Forest Biometrics Lab and utility-scale industry. Also experienced in field-based forest resource assessment, forest management planning, timber valuation, and harvest scheduling, and in small area estimation for forest biomass and carbon.</p>
+</section>
+
+<section>
+  <h2>Areas of Expertise</h2>
+  <div class="skills-row"><span class="label">Forest Management &amp; Timber Economics:</span> Forest management planning &middot; Silviculture &middot; Stand dynamics &middot; Growth &amp; yield &middot; Harvest scheduling &amp; optimization (linear programming) &middot; Timber valuation &middot; DCF / NPV / LEV &middot; 10-year management plans</div>
+  <div class="skills-row"><span class="label">Biometrics, Estimation &amp; Modeling:</span> Forest inventory &amp; mensuration &middot; Sampling design &middot; Small area estimation &middot; Aboveground biomass &amp; carbon estimation &middot; Statistical &amp; machine-learning models &middot; Model validation &middot; Uncertainty assessment</div>
+  <div class="skills-row"><span class="label">Geospatial &amp; Remote Sensing:</span> GIS &middot; High-density LiDAR &middot; Satellite &amp; aerial imagery &middot; Google Earth Engine &middot; Multi-temporal change analysis &middot; Enterprise GIS (ArcGIS Portal, feature &amp; REST services) &middot; Cartography</div>
+  <div class="skills-row"><span class="label">Programming, Automation &amp; Data:</span> Python &middot; ArcPy toolbox development &middot; R (lidR, terra, tidyverse) &middot; SQL &middot; geoprocessing automation &middot; FastAPI &middot; R Shiny &middot; PostGIS / SQLite / R-tree &middot; GDAL &middot; PDAL &middot; Git</div>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Associate Geospatial Analyst</span>
+      <span class="entry-date">Dec 2025 &ndash; Present</span>
+    </div>
+    <div class="entry-org">The Spear Group, on behalf of Florida Power &amp; Light &middot; West Palm Beach, FL</div>
+    <ul>
+      <li>Developed automated LiDAR-to-raster workflows using Python and ArcPy to quantify existing vegetation volume and projected removal volume across electric-utility corridors, supporting vegetation-management planning.</li>
+      <li>Produced spatial distribution maps of vegetation volume and removal requirements, translating LiDAR-derived measurements into location-specific information for operational prioritization.</li>
+      <li>Engineered a full-stack LiDAR data retrieval application using Python, R Shiny, SQLite, and R-tree spatial indexing to automate area-of-interest tile discovery, retrieval, and batch export &mdash; reducing multi-day data-staging workflows to minutes.</li>
+      <li>Automated processing of 14,000+ high-resolution LiDAR tiles for raster generation, feature extraction, and large-scale utility vegetation analysis.</li>
+      <li>Co-led a 38,616+ mile positional-accuracy assessment of electric-utility network data using LiDAR-derived ground truth, spatial statistics, and multi-ring buffer analysis across transmission, feeder, and lateral assets.</li>
+      <li>Developed spatial analyses for vegetation-encroachment forecasting, drone placement, and road reachability by integrating LiDAR, remote sensing, spatial statistics, and machine learning.</li>
+      <li>Built and documented 10 custom ArcPy geoprocessing tools, including end-to-end user tutorials and technical documentation.</li>
+      <li>Designed geospatial schemas and published feature services through an ArcGIS Enterprise Portal environment; used ArcGIS REST services to access enterprise GIS resources and service-based data workflows.</li>
+      <li>Supported enterprise application operations for GEVI (GE Visual Intelligence) &mdash; a platform for planning and scoping arborist and vegetation-management work &mdash; as assistant to the project manager: coordinated user roles and permissions, submitted and tracked vendor support tickets, attended recurring data-ingestion, user-feedback, and release-planning meetings, and contributed to release notes and user status updates.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Forestry Consultant</span>
+      <span class="entry-date">Apr 2023 &ndash; Jun 2023</span>
+    </div>
+    <div class="entry-org">Independent &middot; Nepal</div>
+    <ul>
+      <li>Conducted preliminary resource assessments with forest officials and local stakeholders, including participatory resource mapping, to identify forest resources, management priorities, and operational considerations across 30+ community forests.</li>
+      <li>Conducted forest-boundary surveys, developed field sampling designs, and collected inventory data to quantify standing forest resources.</li>
+      <li>Analyzed inventory and spatial information to support management recommendations and standing-stock revenue estimates using established timber prices.</li>
+      <li>Prepared formal 10-year forest management plans and submitted reports to the Division Forest Office; plans were reviewed and approved for implementation as official management plans.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Graduate Teaching &amp; Research Assistant</span>
+      <span class="entry-date">Jan 2024 &ndash; Dec 2025</span>
+    </div>
+    <div class="entry-org">Forest Biometrics Lab, Mississippi State University &middot; Starkville, MS</div>
+    <ul>
+      <li>Conducted graduate research developing small area estimation methods for county-level aboveground forest biomass, combining FIA forest-inventory data with remote-sensing-derived auxiliary information &mdash; the statistical foundation of forest carbon-stock quantification.</li>
+      <li>Developed and evaluated statistical and machine-learning models to estimate forest attributes across geographic domains, assessing performance with quantitative accuracy and uncertainty measures.</li>
+      <li>Built reproducible Python and R workflows automating preprocessing, quality control, statistical analysis, and model evaluation for large forest-inventory and remote-sensing datasets.</li>
+      <li>Co-instructed undergraduate laboratories in forest inventory, sampling design, stand dynamics, statistics, regression, and GIS.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Research Assistant</span>
+      <span class="entry-date">Sep 2023 &ndash; Dec 2023</span>
+    </div>
+    <div class="entry-org">NAAMII &middot; Lalitpur, Nepal</div>
+    <ul>
+      <li>Led a three-person team through ground-truth collection, geospatial data preparation, image labeling, and model development and evaluation for automated tree-species classification from high-resolution satellite imagery using YOLOv5.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">GIS / Forestry Intern</span>
+      <span class="entry-date">Feb 2022 &ndash; Jun 2022</span>
+    </div>
+    <div class="entry-org">Forest Research and Training Center / Division Forest Office &middot; Myagdi, Nepal</div>
+    <ul>
+      <li>Designed a geodatabase for 30+ community forests, integrating scanned maps, field surveys, digitized features, and aerial photography.</li>
+      <li>Developed and compared machine-learning models for land-cover classification from remotely sensed data.</li>
+      <li>Led an 8-person field team through a 20-day bat acoustic monitoring and spatial-data collection campaign, and ran a GIS workshop for 300+ high-school students on burned-area detection and mapping from satellite imagery.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Remote Intern</span>
+      <span class="entry-date">Jan 2021 &ndash; Jul 2021</span>
+    </div>
+    <div class="entry-org">Friends of Nature (FON Nepal)</div>
+    <ul>
+      <li>Designed questionnaires, analyzed survey data, and prepared conservation reports on wildlife perception and conservation status.</li>
+      <li>Organized conservation outreach for 150+ high-school students and developed educational materials for local communities.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+  <div class="entry keep">
+    <ul class="compact">
+      <li><strong>County-Level Forest Biomass Estimation</strong> &mdash; evaluated conventional and modern small area estimation approaches for aboveground forest biomass using FIA inventory data and remote-sensing-derived auxiliary variables; results presented at four national and regional research meetings.</li>
+      <li><strong>Timberland Harvest Scheduling &amp; Revenue Optimization</strong> &mdash; evaluated a commercial forest tract under alternative management constraints and built a harvest schedule to maximize revenue, applying timber values, planning-period constraints, linear programming, NPV, and LEV to compare management strategies.</li>
+      <li><strong>Python GIS Toolbox Development</strong> &mdash; built ArcGIS Pro toolboxes integrating ArcPy, Spatial Analyst, and 3D Analyst to standardize utility GIS tasks, with documentation and user guides for team adoption.</li>
+      <li><strong>Drone-Placement Suitability &amp; Optimization</strong> &mdash; integrated FAA, FEMA, environmental, and parcel data into a multi-criteria spatial model using cost-accumulation and spatial-overlap analysis.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Master of Science &mdash; Forest Biometrics</span>
+      <span class="entry-date">Dec 2025</span>
+    </div>
+    <div class="entry-org">Mississippi State University &middot; Starkville, MS &middot; GPA 4.0</div>
+    <ul class="compact">
+      <li>Thesis: <em>Small Area Estimation Methods for County-Level Forest Biomass Estimation.</em></li>
+      <li>Relevant coursework: Advanced Forest Inventory &middot; Forest Biometrics &middot; Forest Resources Management &middot; GIS Programming &middot; Geodatabase Design &middot; Statistical Computations in R &middot; Machine Learning in Life Sciences.</li>
+    </ul>
+  </div>
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Bachelor of Science &mdash; Forestry</span>
+      <span class="entry-date">Oct 2022</span>
+    </div>
+    <div class="entry-org">Institute of Forestry, Tribhuvan University &middot; Pokhara, Nepal &middot; Aggregate 80.80%</div>
+    <ul class="compact">
+      <li>Relevant coursework: Forest Resources Economics &middot; Forest Mensuration &middot; Forest Statistics &middot; Experimental Design &middot; GIS &amp; Remote Sensing.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Presentations</h2>
+  <div class="entry keep">
+    <ul class="compact">
+      <li>County-Level Biomass Estimation Across Four FIA Units. <em>Partnership for Small Area Estimation Meeting</em>, 2025.</li>
+      <li>Enhanced Biomass Estimation at Smaller Domains: Conventional vs. Modern Small Area Estimation Techniques. <em>Biannual Southern Silviculture Research Conference</em>, 2025.</li>
+      <li>County-Level Aboveground Forest Biomass Estimation Using Remote-Sensing-Derived Auxiliary Information. <em>Graduate Student Research Symposium</em>, 2025.</li>
+      <li>Machine Learning Approaches to Enhance Small Domain Estimates. <em>FIA Science Symposium</em>, 2024.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Leadership</h2>
+  <div class="entry keep">
+    <div class="entry-head">
+      <span class="entry-title">Secretary / Coordinator</span>
+      <span class="entry-date">May 2019 &ndash; May 2022</span>
+    </div>
+    <div class="entry-org">Bat Friends Pokhara &middot; Nepal</div>
+    <ul class="compact">
+      <li>Led an 11-member undergraduate team in bat research and monitoring; coordinated conservation and outreach programs across five districts.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Proficiencies</h2>
+  <div class="skills-row"><span class="label">Analysis:</span> Python &middot; R &middot; SQL &middot; pandas &middot; NumPy &middot; statistical modeling &middot; machine learning</div>
+  <div class="skills-row"><span class="label">Forestry / GIS:</span> ArcGIS Pro &middot; QGIS &middot; Google Earth Engine &middot; ArcPy &middot; lidR &middot; terra &middot; LiDAR &middot; remote sensing &middot; spatial analysis</div>
+  <div class="skills-row"><span class="label">Data &amp; Infrastructure:</span> PostgreSQL/PostGIS &middot; SQLite / R-tree &middot; geodatabases &middot; GDAL &middot; PDAL &middot; FastAPI &middot; R Shiny &middot; Git/GitHub</div>
+</section>
+
+<section>
+  <h2>Training &amp; Certifications</h2>
+  <div class="entry keep">
+    <ul class="compact">
+      <li>Species Distribution Modeling with Remote Sensing &mdash; NASA ARSET webinar.</li>
+      <li>Satellite Observations and Tools for Fire Risk, Detection, and Analysis &mdash; NASA ARSET webinar.</li>
+      <li>Fundamentals of GIS &mdash; University of California, Davis (Coursera).</li>
+      <li>Python Basics &mdash; Michigan State University (Coursera).</li>
+      <li>Spatial Data Science: The New Frontier in Analytics &mdash; Esri MOOC.</li>
+      <li>Going Places with Spatial Analysis &mdash; Esri MOOC.</li>
+      <li>Wildlife Research Techniques Training, 2020 (19 days) &mdash; Friends of Nature (FON), Nepal.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Honors</h2>
+  <div class="entry keep">
+    <ul class="compact">
+      <li>Graduate Student Award, Xi Sigma Pi &mdash; Alpha Theta Chapter, 2025.</li>
+      <li>Tribhuvan University Full Tuition Waiver, 2018&ndash;2022.</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>

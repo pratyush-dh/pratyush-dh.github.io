@@ -389,6 +389,19 @@ code{
 
 /* ---------- resume ---------- */
 .resume-summary{ max-width:70ch; }
+.cv-download{
+  display:inline-block;
+  margin-top:1.4rem;
+  padding:0.6rem 1.3rem;
+  border:1px solid var(--gold);
+  border-radius:2px;
+  color:var(--gold);
+  font-size:0.9rem;
+  letter-spacing:0.02em;
+  text-decoration:none;
+  transition:background 0.2s ease, color 0.2s ease;
+}
+.cv-download:hover{ background:var(--gold); color:var(--bg-deep); }
 .resume-competencies{ margin:0 0 3.4rem; }
 .competency-grid{
   display:grid; grid-template-columns:repeat(2, 1fr); gap:1.4rem 2.4rem;

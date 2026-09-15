@@ -95,9 +95,9 @@
     {
       title: "US Forest Inventory Explorer (FIADB)",
       category: "gis",
-      image: "assets/img/portfolio/foreststandprofile1.jpg",
-      summary: "Interactive choropleth built on live USDA FIADB-API queries — volume, biomass, growth, mortality, removals, sawlog stock, and forest area by stand-size class, at state and county level, with per-acre density views and a zoomable county drill-down.",
-      tags: ["D3.js", "USDA FIADB-API", "Forest inventory", "Python"],
+      image: "assets/img/portfolio/foreststandprofile1.png",
+      summary: "Interactive choropleth built on live USDA FIADB-API queries — volume, biomass, growth, mortality, removals, sawlog stock, and forest area by stand-size class, at state, county, and national level, with per-acre density views, a zoomable county drill-down, and a monthly GitHub Actions pipeline that re-pulls the data and opens a PR automatically.",
+      tags: ["D3.js", "USDA FIADB-API", "Forest inventory", "Python", "GitHub Actions"],
       live: "https://pratyush-dh.github.io/projects/fia-forest-stand-profile/",
       source: "https://github.com/pratyush-dh/projects/tree/main/fia-forest-stand-profile",
     },

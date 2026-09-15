@@ -93,6 +93,15 @@
       source: "https://github.com/pratyush-dh/projects/tree/main/equal-earth-projection-benchmark",
     },
     {
+      title: "US Forest Inventory Explorer (FIADB)",
+      category: "gis",
+      image: "assets/img/portfolio/foreststandprofile1.jpg",
+      summary: "Interactive choropleth built on live USDA FIADB-API queries — volume, biomass, growth, mortality, removals, sawlog stock, and forest area by stand-size class, at state and county level, with per-acre density views and a zoomable county drill-down.",
+      tags: ["D3.js", "USDA FIADB-API", "Forest inventory", "Python"],
+      live: "https://pratyush-dh.github.io/projects/fia-forest-stand-profile/",
+      source: "https://github.com/pratyush-dh/projects/tree/main/fia-forest-stand-profile",
+    },
+    {
       title: "Potato Disease Identification",
       category: "ml",
       image: "assets/img/portfolio/potatodisease2.jpg",

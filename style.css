@@ -420,6 +420,15 @@ code{
 .resume-columns{
   display:grid; grid-template-columns:1fr 1fr; gap:4.5rem;
 }
+/* Education/Research and Professional experience run to very different
+   lengths -- grid items stretch to match the taller column by default, so a
+   divider on the second column rides that stretched height automatically
+   and reads as "two columns of different length" instead of a stray gap
+   in the layout once the shorter one runs out of content. */
+.resume-col + .resume-col{
+  border-left:1px solid var(--line);
+  padding-left:1.75rem;
+}
 .resume-col-title{
   font-family:var(--serif); font-weight:500; font-size:1.2rem;
   margin:0 0 1.4rem;
@@ -466,6 +475,7 @@ code{
 
 @media (max-width: 1000px){
   .resume-columns{ grid-template-columns:1fr; gap:0.5rem; }
+  .resume-col + .resume-col{ border-left:none; padding-left:0; margin-top:1rem; padding-top:1.5rem; border-top:1px solid var(--line); }
 }
 
 /* ---------- portfolio ---------- */

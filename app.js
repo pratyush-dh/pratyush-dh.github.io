@@ -174,6 +174,15 @@
       source: "https://github.com/pratyush-dh/cartography",
     },
     {
+      title: "Kathmandu Valley Topographic Map",
+      category: "gis",
+      image: "assets/img/portfolio/ktmvalley1.jpg",
+      summary: "Topographic map of Kathmandu Valley, Nepal, built from USGS elevation data downloaded via a Google Earth Engine script and rendered in ArcGIS Pro.",
+      tags: ["Cartography", "ArcGIS Pro", "Google Earth Engine", "USGS"],
+      details: "ktmValleyDetails.html",
+      source: "https://github.com/pratyush-dh/cartography",
+    },
+    {
       title: "Geo Quiz",
       category: "development",
       image: "assets/img/portfolio/geoquiz1.jpg",

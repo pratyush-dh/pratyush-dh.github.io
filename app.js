@@ -102,12 +102,12 @@
       source: "https://github.com/pratyush-dh/projects/tree/main/fia-forest-stand-profile",
     },
     {
-      title: "US Pulp Mills, a Working Sample",
+      title: "US Wood-Products Mills, a Working Sample",
       category: "gis",
-      image: "assets/img/portfolio/pulpmills1.png",
-      summary: "A zoomable, pannable map of about 115 US pulp mills, 1860 to present, compiled from public web sources rather than an official registry, with a play/scrub timeline of openings and closures, click-to-pin detail cards per mill, and support for loading your own CSV of facilities.",
-      tags: ["D3.js", "Cartography", "Time-series map", "Interactive"],
-      live: "https://pratyush-dh.github.io/forestry-maps/pulp-mills/",
+      image: "assets/img/portfolio/woodmills1.png",
+      summary: "A zoomable, pannable map of about 196 US pulp, paper, sawmill, plywood, OSB and MDF mills, 1860 to present, compiled from public web sources rather than an official registry. Type-coded markers, a play/scrub timeline of openings and closures, a mill-type filter, click-to-pin detail cards, and support for loading your own CSV.",
+      tags: ["D3.js", "Cartography", "Time-series map", "Forest products"],
+      live: "https://pratyush-dh.github.io/forestry-maps/wood-mills/",
       source: "https://github.com/pratyush-dh/forestry-maps",
     },
     {

@@ -102,6 +102,15 @@
       source: "https://github.com/pratyush-dh/projects/tree/main/fia-forest-stand-profile",
     },
     {
+      title: "FIA Tree Height Codes: Crews vs. a Height Model",
+      category: "gis",
+      image: "assets/img/portfolio/fiaheightbias1.jpg",
+      summary: "An analysis of how the USDA Forest Service's FIA program records tree height: species x ecodivision height-diameter models trained only on field-measured trees, used to check crew-reconstructed heights on broken-top trees, with regional bias maps, a stump-height test, and a check against each tree's earlier measured height.",
+      tags: ["Data analysis", "USDA FIADB", "PostgreSQL/PostGIS", "Python"],
+      live: "https://pratyush-dh.github.io/projects/blog/",
+      source: "https://github.com/pratyush-dh/projects/tree/main/blog",
+    },
+    {
       title: "US Wood-Products Mills, a Working Sample",
       category: "gis",
       image: "assets/img/portfolio/woodmills1.png",

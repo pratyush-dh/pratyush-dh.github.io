@@ -102,10 +102,10 @@
       source: "https://github.com/pratyush-dh/projects/tree/main/fia-forest-stand-profile",
     },
     {
-      title: "FIA Tree Height Codes: Crews vs. a Height Model",
+      title: "FIA Tree Height Codes: Checking Two Kinds of Imputed Heights",
       category: "biometrics",
       image: "assets/img/portfolio/fiaheightbias1.jpg",
-      summary: "An analysis of how the USDA Forest Service's FIA program records tree height: species x ecodivision height-diameter models trained only on field-measured trees, used to check crew-reconstructed heights on broken-top trees, with regional bias maps, a stump-height test, and a check against each tree's earlier measured height.",
+      summary: "A two-part analysis of how the USDA Forest Service's FIA program fills in tree heights it never measured: crew-reconstructed heights on broken-top trees (part 1), and FIA's own undocumented height model (part 2), both checked against a regional height-diameter model trained only on measured trees and an independent growth-based anchor test.",
       tags: ["Data analysis", "USDA FIADB", "PostgreSQL/PostGIS", "Python"],
       live: "https://pratyush-dh.github.io/projects/blog/",
       source: "https://github.com/pratyush-dh/projects/tree/main/blog",

@@ -6,7 +6,7 @@
 <style>
   @page {
     size: A4;
-    margin: 14mm 15mm 16mm;
+    margin: 12mm 15mm 12mm;
   }
 
   * { box-sizing: border-box; }
@@ -64,8 +64,8 @@
     letter-spacing: 1pt;
     color: #14351f;
     border-bottom: 1pt solid #b9cdc0;
-    padding-bottom: 2.5pt;
-    margin: 9pt 0 4pt;
+    padding-bottom: 1.5pt;
+    margin: 5pt 0 3pt;
     page-break-after: avoid;
     break-after: avoid;
   }
@@ -73,7 +73,7 @@
   section { page-break-inside: auto; }
 
   .entry {
-    margin-bottom: 6pt;
+    margin-bottom: 4pt;
   }
 
   .entry.keep {
@@ -121,7 +121,7 @@
     padding-left: 15pt;
   }
 
-  li { margin-bottom: 2.5pt; }
+  li { margin-bottom: 1.5pt; }
 
   p { margin: 0 0 5pt; }
 
@@ -169,7 +169,7 @@
 <section>
   <h2>Areas of Expertise</h2>
   <div class="skills-row"><span class="label">Forest Management &amp; Timber Economics:</span> Forest management planning &middot; Silviculture &middot; Stand dynamics &middot; Growth &amp; yield &middot; Harvest scheduling &amp; optimization (linear programming) &middot; Timber valuation &middot; DCF / NPV / LEV &middot; 10-year management plans</div>
-  <div class="skills-row"><span class="label">Biometrics, Estimation &amp; Modeling:</span> Forest inventory &amp; mensuration &middot; Sampling design &middot; Small area estimation &middot; Aboveground biomass &amp; carbon estimation &middot; Statistical &amp; machine-learning models &middot; Model validation &middot; Uncertainty assessment</div>
+  <div class="skills-row"><span class="label">Biometrics, Estimation &amp; Modeling:</span> Forest inventory &amp; mensuration &middot; Height&ndash;diameter modeling &middot; Sampling design &middot; Small area estimation &middot; Aboveground biomass &amp; carbon estimation &middot; Statistical &amp; machine-learning models &middot; Model validation &middot; Uncertainty assessment</div>
   <div class="skills-row"><span class="label">Geospatial &amp; Remote Sensing:</span> GIS &middot; High-density LiDAR &middot; Satellite &amp; aerial imagery &middot; Google Earth Engine &middot; Multi-temporal change analysis &middot; Enterprise GIS (ArcGIS Portal, feature &amp; REST services) &middot; Cartography</div>
   <div class="skills-row"><span class="label">Programming, Automation &amp; Data:</span> Python &middot; ArcPy toolbox development &middot; R (lidR, terra, tidyverse) &middot; SQL &middot; geoprocessing automation &middot; FastAPI &middot; R Shiny &middot; PostGIS / SQLite / R-tree &middot; GDAL &middot; PDAL &middot; Git</div>
 </section>
@@ -265,6 +265,7 @@
   <h2>Selected Projects</h2>
   <div class="entry keep">
     <ul class="compact">
+      <li><strong>FIA Tree Height Codes: Crews vs. a Height Model</strong> &mdash; independent analysis: trained height&ndash;diameter models on 11.8M FIA trees and evaluated &sim;200,000 crew-reconstructed heights on broken-top trees, diagnosing a spurious stump-height artifact by simulation. Public write-up and code.</li>
       <li><strong>County-Level Forest Biomass Estimation</strong> &mdash; evaluated conventional and modern small area estimation approaches for aboveground forest biomass using FIA inventory data and remote-sensing-derived auxiliary variables; results presented at four national and regional research meetings.</li>
       <li><strong>Timberland Harvest Scheduling &amp; Revenue Optimization</strong> &mdash; evaluated a commercial forest tract under alternative management constraints and built a harvest schedule to maximize revenue, applying timber values, planning-period constraints, linear programming, NPV, and LEV to compare management strategies.</li>
       <li><strong>Python GIS Toolbox Development</strong> &mdash; built ArcGIS Pro toolboxes integrating ArcPy, Spatial Analyst, and 3D Analyst to standardize utility GIS tasks, with documentation and user guides for team adoption.</li>

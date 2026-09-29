@@ -103,7 +103,7 @@
     },
     {
       title: "FIA Tree Height Codes: Crews vs. a Height Model",
-      category: "gis",
+      category: "biometrics",
       image: "assets/img/portfolio/fiaheightbias1.jpg",
       summary: "An analysis of how the USDA Forest Service's FIA program records tree height: species x ecodivision height-diameter models trained only on field-measured trees, used to check crew-reconstructed heights on broken-top trees, with regional bias maps, a stump-height test, and a check against each tree's earlier measured height.",
       tags: ["Data analysis", "USDA FIADB", "PostgreSQL/PostGIS", "Python"],
@@ -242,7 +242,7 @@
   if (grid) {
     grid.innerHTML = projects
       .map((p) => {
-        const categoryLabel = { gis: "Remote Sensing & GIS", ml: "Machine Learning", development: "Development" }[p.category];
+        const categoryLabel = { gis: "Remote Sensing & GIS", ml: "Machine Learning", development: "Development", biometrics: "Forest Biometrics" }[p.category];
         const links = [
           p.live ? `<a class="primary" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : "",
           p.details ? `<a href="${p.details}">Details</a>` : "",

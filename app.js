@@ -105,7 +105,7 @@
       title: "FIA Tree Height Codes: Checking Two Kinds of Imputed Heights",
       category: "biometrics",
       image: "assets/img/portfolio/fiaheightbias1.jpg",
-      summary: "A two-part analysis of how the USDA Forest Service's FIA program fills in tree heights it never measured: crew-reconstructed heights on broken-top trees (part 1), and FIA's own undocumented height model (part 2), both checked against a regional height-diameter model trained only on measured trees and an independent growth-based anchor test.",
+      summary: "A two-part analysis of how FIA fills in tree heights it never measured: crew-reconstructed heights on broken-top trees (part 1), and FIA's own undocumented height model (part 2). Part 2's finding: diameter-only models can substantially underestimate growth on larger trees; FIA's own estimate tracks a remeasurement-based benchmark closely, likely because it shares that benchmark's input rather than being independently more accurate.",
       tags: ["Data analysis", "USDA FIADB", "PostgreSQL/PostGIS", "Python"],
       live: "https://pratyush-dh.github.io/projects/blog/",
       source: "https://github.com/pratyush-dh/projects/tree/main/blog",

@@ -123,7 +123,7 @@
       title: "FIA Tree Height Codes, Part 3: Carbon Density by Ecoregion",
       category: "biometrics",
       image: "assets/img/portfolio/fiaheightcarbon_1.jpg",
-      summary: "Live-tree carbon density compared across 35 Cleland ecodivisions (Welch's ANOVA, Kruskal-Wallis, Games-Howell/Dunn-Holm post-hoc): a real 28-fold regional spread, but also a high within-division coefficient of variation traced to FIA's sample design targeting state/national, not ecoregion-level, estimates. The highest-carbon divisions turn out to be the same ones leaning hardest on Part 2's FIA-modeled tree heights.",
+      summary: "Live-tree carbon density compared across 35 Cleland ecodivisions (Welch's ANOVA, Kruskal-Wallis, Games-Howell/Dunn-Holm post-hoc): a design-based (FIA post-stratified) regional spread of about 29-fold, but also a high within-division coefficient of variation, traced to FIA's sample design targeting state and national, not ecoregion-level, estimates. The highest-carbon divisions turn out to be the same ones leaning hardest on Part 2's FIA-modeled tree heights.",
       tags: ["Data analysis", "USDA FIADB", "SQLite", "Python"],
       live: "https://pratyush-dh.github.io/projects/blog/carbon-by-ecoregion/",
       source: "https://github.com/pratyush-dh/projects/tree/main/blog/carbon_ecoregion",

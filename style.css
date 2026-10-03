@@ -245,6 +245,8 @@ code{
 .about-copy .role{ color:var(--gold); font-size:clamp(1.05rem, 1.25vw, 1.2rem); font-weight:500;}
 .about-copy .desc{ color:var(--ink-dim); font-size:clamp(1.05rem, 1.15vw, 1.2rem); line-height:1.65; font-weight:300; max-width:48ch;}
 .about-copy .desc.small{ font-size:0.95rem; }
+.about-copy .desc p{ margin:0 0 0.9em; }
+.about-copy .desc blockquote{ margin:1.1em 0 0; padding-left:1em; border-left:2px solid var(--gold); color:var(--ink); font-style:italic; }
 .about-copy .loc{ color:var(--ink-faint); font-size:1rem; }
 .open-to{ margin-top:0.4rem; }
 .open-to-label{

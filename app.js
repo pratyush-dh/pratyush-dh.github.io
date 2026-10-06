@@ -3,9 +3,14 @@
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // hero thumbnail fade-in (single load moment)
-  document.querySelectorAll('#hero-strip img').forEach((img, i) => {
-    setTimeout(() => img.classList.add('in'), 600 + i * 90);
+  // hero reel: duplicate each row's tiles so the drift loops seamlessly
+  document.querySelectorAll('#hero-reel .reel-track').forEach((track) => {
+    [...track.children].forEach((tile) => {
+      const copy = tile.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.tabIndex = -1;
+      track.appendChild(copy);
+    });
   });
 
   // one clean reveal per section: about media/copy + every .reveal section

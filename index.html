@@ -14,7 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pratyush Dhungana — Forest Biometrician and Geospatial Data Scientist</title>
   <meta name="description" content="Pratyush Dhungana — Forest Biometrician and Geospatial Data Scientist working on sampling, data quality, uncertainty, and defensible analysis across forestry, GIS, and remote sensing." />
-  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -307,6 +309,20 @@
             them to evaluate about 200,000 crew-reconstructed heights on broken-top trees; identified and diagnosed a
             spurious stump-height artifact by simulation, and mapped regional bias patterns across ecodivisions and states.
             Public write-up and reproducible code.
+          </p>
+          <p class="timeline-detail">
+            <a href="https://pratyush-dh.github.io/projects/blog/htcd4/">Part 2: FIA's Own Height Model</a>
+            &mdash; checked FIA's undocumented HTCD 4 height model against the regional height&ndash;diameter model and against a
+            remeasurement-based benchmark built from each tree's own measurement history; showed diameter-only models
+            underestimate growth on larger trees and that FIA's close agreement with the benchmark likely reflects a shared input,
+            not independent accuracy.
+          </p>
+          <p class="timeline-detail">
+            <a href="https://pratyush-dh.github.io/projects/blog/carbon-by-ecoregion/">Part 3: Carbon Density by Ecoregion</a>
+            &mdash; compared live-tree carbon density across 35 ecodivisions with design-based (post-stratified) estimates, Welch's ANOVA,
+            Kruskal&ndash;Wallis, and Games&ndash;Howell/Dunn&ndash;Holm post-hoc tests; found a roughly 29-fold regional spread with high
+            within-division variability, traced to FIA's sample design, and linked the highest-carbon divisions to heavier reliance on
+            FIA-modeled heights. Built on PostgreSQL/PostGIS, SQLite, and Python.
           </p>
         </li>
         <li class="timeline-item">

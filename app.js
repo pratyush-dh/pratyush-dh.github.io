@@ -228,6 +228,15 @@
       source: "https://github.com/pratyush-dh/carbon-data-atlas",
     },
     {
+      title: "Rainfall Relief & Pulse: US Precipitation as Terrain",
+      category: "gis",
+      image: "assets/img/portfolio/rainfall-pulse.png",
+      summary: "US annual precipitation drawn as terrain height: a 3D relief map beside real elevation with one shared colour gradient, and a 30-year pulse where wet years swell and droughts sink. Pick any year range, upload your own yearly rasters, and export per-year maps and an animated GIF.",
+      tags: ["PRISM", "three.js", "MapLibre GL", "Python", "rasterio", "Time series"],
+      live: "https://pratyush-dh.github.io/projects/rainfall-relief/pulse.html",
+      source: "https://github.com/pratyush-dh/projects/tree/main/rainfall-relief",
+    },
+    {
       title: "Carbon Data Atlas",
       category: "development",
       image: "assets/img/portfolio/carbonatlas-home.png",

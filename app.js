@@ -134,6 +134,15 @@
       source: "https://github.com/pratyush-dh/projects/tree/main/blog/carbon_ecoregion",
     },
     {
+      title: "FIA Tree Measurement Distributions",
+      category: "biometrics",
+      image: "assets/img/portfolio/fiadistributions_1.jpg",
+      summary: "An interactive dashboard of live-tree diameter, height, biomass, and volume from FIADB, with an adjustable bin count, a two-variable scatter plot, and region/state scoping, all computed client-side from a stratified 82,279-tree sample. Raw tree counts show an artificial dip-then-spike right at the 5-inch microplot/subplot threshold; weighting each tree by trees-per-acre corrects it into the smooth reverse-J diameter distribution expected of a natural, uneven-aged forest.",
+      tags: ["Data visualization", "USDA FIADB", "D3.js", "Interactive dashboard"],
+      live: "https://claude.ai/artifact/KsQBDMiLRx3vu3P3rgWEiR",
+      source: "https://github.com/pratyush-dh/projects/tree/main/blog/distribution_check",
+    },
+    {
       title: "US Wood-Products Mills, a Working Sample",
       category: "gis",
       image: "assets/img/portfolio/woodmills1.png",

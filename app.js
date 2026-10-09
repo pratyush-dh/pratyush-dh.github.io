@@ -260,6 +260,14 @@
       source: "https://github.com/pratyush-dh/carbon-data-atlas",
     },
     {
+      title: "3D Forest Height Studio",
+      category: "development",
+      image: "assets/img/portfolio/forest-studio-florida.jpg",
+      summary: "Open-source R Shiny app that builds interactive 3D forest-canopy-height maps for any country or region: pick a place, download the ETH 10 m canopy tiles, then orbit, relight and recolor the terrain live in WebGL, with a lat/long grid, scale bar, CRS and locator globe. Exports PNG, a shareable interactive web page, GeoTIFF and a reproducible R script. Inspired by Milos Popovic's 3D forest-height tutorial.",
+      tags: ["R", "Shiny", "three.js", "WebGL", "terra / sf", "ETH canopy height"],
+      source: "https://github.com/pratyush-dh/3d-forest-height-studio",
+    },
+    {
       title: "Geo Quiz",
       category: "development",
       image: "assets/img/portfolio/geoquiz1.jpg",

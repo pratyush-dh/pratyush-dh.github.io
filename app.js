@@ -263,8 +263,10 @@
       title: "3D Forest Height Studio",
       category: "development",
       image: "assets/img/portfolio/forest-studio-florida.jpg",
-      summary: "Open-source R Shiny app that builds interactive 3D forest-canopy-height maps for any country or region: pick a place, download the ETH 10 m canopy tiles, then orbit, relight and recolor the terrain live in WebGL, with a lat/long grid, scale bar, CRS and locator globe. Exports PNG, a shareable interactive web page, GeoTIFF and a reproducible R script. Inspired by Milos Popovic's 3D forest-height tutorial.",
+      summary: "Open-source R Shiny app that builds interactive 3D forest-canopy-height maps for any country or region: pick a place, download the ETH 10 m canopy tiles, then orbit, relight and recolor the terrain live in WebGL, with a lat/long grid, scale bar, CRS and locator globe. Exports PNG, a shareable interactive web page, GeoTIFF and a reproducible R script. Ships as an offline Windows installer with a step-by-step tutorial. Inspired by Milos Popovic's 3D forest-height tutorial.",
       tags: ["R", "Shiny", "three.js", "WebGL", "terra / sf", "ETH canopy height"],
+      details: "https://github.com/pratyush-dh/3d-forest-height-studio/blob/main/docs/TUTORIAL.md",
+      download: "https://github.com/pratyush-dh/3d-forest-height-studio/releases/latest",
       source: "https://github.com/pratyush-dh/3d-forest-height-studio",
     },
     {
@@ -313,6 +315,7 @@
         const links = [
           p.live ? `<a class="primary" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : "",
           p.details ? `<a href="${p.details}">Details</a>` : "",
+          p.download ? `<a href="${p.download}" target="_blank" rel="noopener">Download</a>` : "",
           p.source ? `<a href="${p.source}" target="_blank" rel="noopener">Source</a>` : "",
         ].join("");
         return `

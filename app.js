@@ -146,10 +146,10 @@
       title: "US Wood-Products Mills, a Working Sample",
       category: "gis",
       image: "assets/img/portfolio/woodmills1.png",
-      summary: "A zoomable, pannable map of about 196 US pulp, paper, sawmill, plywood, OSB and MDF mills, 1860 to present, compiled from public web sources rather than an official registry. Type-coded markers, a play/scrub timeline of openings and closures, a mill-type filter, click-to-pin detail cards, and support for loading your own CSV.",
-      tags: ["D3.js", "Cartography", "Time-series map", "Forest products"],
+      summary: "A zoomable, pannable map of about 196 US pulp, paper, sawmill, plywood, OSB and MDF mills, 1860 to present, compiled from public web sources rather than an official registry. Type-coded markers, a play/scrub timeline of openings and closures, a mill-type filter, click-to-pin detail cards, and support for loading your own CSV. Also includes a print-style static map poster (five enlarged frames, Alaska and Hawaii insets) with the GIS layers behind it: WGS84 and projected GeoJSON and shapefiles, a QGIS style, a QA report and the Python build scripts.",
+      tags: ["D3.js", "Cartography", "Time-series map", "QGIS", "Python", "Forest products"],
       live: "https://pratyush-dh.github.io/forestry-maps/wood-mills/",
-      source: "https://github.com/pratyush-dh/forestry-maps",
+      source: "https://github.com/pratyush-dh/forestry-maps/tree/main/wood-mills",
     },
     {
       title: "Potato Disease Identification",

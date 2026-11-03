@@ -680,3 +680,11 @@ footer{
   .cap-panel{ display:block !important; opacity:1 !important; }
   .overlay-panel.open{ transform:none !important; }
 }
+
+/* card reached from a reel tile or a #project-... link */
+.portfolio-card.flash{ animation:card-flash 2.4s ease-out 1; }
+@keyframes card-flash{
+  0%,40%{ box-shadow:0 0 0 2px var(--gold), 0 0 28px rgba(214,169,74,0.35); }
+  100%{ box-shadow:0 0 0 0 rgba(214,169,74,0); }
+}
+.portfolio-card{ scroll-margin-top:5.2rem; }

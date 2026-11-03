@@ -152,6 +152,15 @@
       source: "https://github.com/pratyush-dh/forestry-maps/tree/main/wood-mills",
     },
     {
+      title: "Forest to Mill: Where Wood Moves by Road",
+      category: "gis",
+      image: "assets/img/portfolio/forest-to-mill.jpg",
+      summary: "Day 2 of 30 Days 30 Maps. Modelled wood-haul traffic from FIA forest removals to 117 mills across 13 southern states, Oklahoma and Texas to Virginia: every forest hex sends its wood to all the mills it can reach by road, and road thickness is the wood summed over every route. Set the haul-time cap, how freely wood goes to farther mills, and whether a county's removals fall evenly or by NLCD tree canopy; click a patch, a mill or any chart bar and the map zooms to it. Includes print-style static maps (paper and night) and a GeoPackage of the hex, road, mill and state layers. A model, not a traffic count; the mill list is a sample.",
+      tags: ["Cartography", "Road-network routing", "NLCD tree canopy", "FIA", "Canvas", "QGIS", "Python"],
+      live: "https://pratyush-dh.github.io/forestry-maps/forest-to-mill/",
+      source: "https://github.com/pratyush-dh/forestry-maps/tree/main/forest-to-mill",
+    },
+    {
       title: "Potato Disease Identification",
       category: "ml",
       image: "assets/img/portfolio/potatodisease2.jpg",

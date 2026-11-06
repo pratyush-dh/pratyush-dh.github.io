@@ -168,6 +168,15 @@
       source: "https://github.com/pratyush-dh/forestry-maps/tree/main/forest-to-mill",
     },
     {
+      title: "Sight: Giants in View from Pokhara's Viewpoints",
+      category: "gis",
+      image: "assets/img/portfolio/pokhara-sight.jpg",
+      summary: "A 360-degree line-of-sight study from seven established Pokhara viewpoints (Sarangkot, World Peace Pagoda, Kahun Danda, Pumdikot, Kaskikot, Naudanda and Lakeside) to nine Himalayan giants, shown as a rotating sweep that lights up the ground in view, coloured by distance, beside a live horizon panorama. Built on the 30 m Copernicus surface model with earth curvature and refraction and an explicit terrain-profile line-of-sight test, because GDAL's viewshed was not reciprocal for grazing lines. Kahun Danda and Pumdikot see 8 of the 9 peaks, Sarangkot and Naudanda 6. Geometric line of sight only (no haze or cloud), and one marginal peak, Annapurna II, makes the counts plus or minus one.",
+      tags: ["Cartography", "Line of sight", "Copernicus DEM", "Animation", "Python"],
+      live: "https://pratyush-dh.github.io/projects/pokhara-sight/",
+      source: "https://github.com/pratyush-dh/projects/tree/main/pokhara-sight",
+    },
+    {
       title: "Potato Disease Identification",
       category: "ml",
       image: "assets/img/portfolio/potatodisease2.jpg",
